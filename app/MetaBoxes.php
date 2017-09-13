@@ -23,18 +23,21 @@ class MetaBoxes {
 			'priority' => 'high',
 			'context' => 'side',
 			'fields'     => array(
+
 				array(
 					'id'   => 'author',
 					'name' => __( 'Book Author', 'cranleigh-2016' ),
 					'type' => 'post',
-					'post_type' => 'book-author'
+					'post_type' => 'book_author'
 				),
+
 				array(
 					'id' => 'peagreenlink',
 					'name' => __( 'Pea Green Boat Link', 'cranleigh-2016'),
 					'type' => 'url',
 					'desc' => 'The URL to the `product page` on Pea Green Boat Books'
-				)
+				),
+				
 			),
 		);
 		return $meta_boxes;
