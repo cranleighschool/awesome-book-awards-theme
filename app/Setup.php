@@ -25,6 +25,9 @@ class Setup {
 		new Author();
 		new School();
 	}
+	static public function ThemeUpdateChecker() {
+		new ThemeUpdateChecker();
+	}
 	static public function MetaBoxes() {
 		new MetaBoxes();
 	}

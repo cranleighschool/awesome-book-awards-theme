@@ -10,7 +10,7 @@ require_once 'vendor/autoload.php';
 Setup::run();
 Setup::CustomPostTypes();
 Setup::MetaBoxes();
-new ThemeUpdateChecker();
+Setup::ThemeUpdateChecker();
 /**
  * Theme setup and custom theme supports.
  */

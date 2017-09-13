@@ -22,9 +22,12 @@ class ThemeUpdateChecker {
 		);
 
 		$update->setBranch('master');
+		$this->updateobj = $update;
+
 	}
 
 	private function functionsFilePath() {
+		//return dirname(dirname(__FILE__));
 		$this->stylesheet_directory = get_stylesheet_directory();
 
 		return $this->stylesheet_directory.'/functions.php';
