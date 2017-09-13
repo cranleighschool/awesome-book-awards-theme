@@ -8,6 +8,7 @@
 
 namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 
+use WP_Query;
 
 class Book extends BaseType {
 
@@ -39,6 +40,21 @@ class Book extends BaseType {
 		]);
 
 		$this->post_type->taxonomy('year');
+
+	}
+
+	public function getPosts() {
+		$args = [
+			"posts_per_page" => -1,
+			"post_type" => $this->post_type_key,
+			"orderby" => [
+				"menu_order" => "ASC",
+				"title" => "ASC"
+			]
+
+		];
+
+		return new WP_Query($args);
 
 	}
 }

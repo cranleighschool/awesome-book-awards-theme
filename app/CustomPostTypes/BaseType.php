@@ -28,7 +28,7 @@ abstract class BaseType {
 
 	protected $post_type = false;
 
-	public function __construct() {
+	public function init() {
 
 		$this->setup();
 
