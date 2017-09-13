@@ -1,0 +1,21 @@
+{
+    "name": "fredbradley/awesome-book-awards",
+    "description": "A Wordpress Theme for the Awesome Book Awards by Cranleigh School",
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^4.2",
+        "yahnis-elsts/admin-notices": "^1.0",
+        "jjgrainger/PostTypes": "^1.1"
+    },
+    "authors": [
+        {
+            "name": "Fred Bradley",
+            "email": "hello@fredbradley.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"CranleighSchool\\AwesomeBookAwardsTheme\\": "app/"},
+        "files": [
+            "app/helpers.php"
+        ]
+    }
+}

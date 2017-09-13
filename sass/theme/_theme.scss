@@ -1,0 +1,29 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+	background: #f1f1f1;
+	font-family:"Benton Sans Lt";
+
+	h1,h2,h3,h4,h5 {
+		font-family: "AspW-Rg";
+		text-transform: uppercase;
+	}
+}
+
+
+#masthead {
+	background-repeat: repeat-x;
+	background-position: center center;
+	min-height: 200px;
+	background-image: url('../img/AwesomeBookAwardsHeader.jpg');
+
+	.custom-logo-link {
+		margin-top:50px;
+	}
+}
+#wrapper-footer {
+	background: #343a40;
+	color:#fff;
+	.site-info {
+		font-size: 0.8em;
+	}
+}
