@@ -52,6 +52,7 @@ class Book extends BaseType {
 
 	}
 
+
 	public function getPosts(array $args) {
 		$default = [
 			"posts_per_page" => -1,

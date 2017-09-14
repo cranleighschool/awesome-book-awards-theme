@@ -8,6 +8,7 @@
 
 namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 
+use CranleighSchool\AwesomeBookAwardsTheme\GetPostMeta;
 use PostTypes\PostType;
 use WP_Error;
 use YeEasyAdminNotices\V1\AdminNotice;
@@ -58,6 +59,15 @@ abstract class BaseType {
 
 	protected function addSupportFor($value) {
 		$this->options['supports'][] = $value;
+	}
+
+	public function get(int $post_id=null) {
+		if ($post_id===null) {
+			$post_id = get_the_ID();
+		}
+		$this->post = get_post($post_id);
+		$this->meta = new GetPostMeta($post_id);
+		return $this;
 	}
 
 	/**

@@ -9154,6 +9154,36 @@ body {
   #wrapper-footer .site-info {
     font-size: 0.8em; }
 
+.btn-peagreen {
+  color: #111;
+  background-color: #78be20;
+  border-color: #416711;
+  color: #fff;
+  white-space: normal;
+  text-transform: uppercase;
+  font-family: "AspW-Rg";
+  background-image: url("../img/PGBB-Logo-50px.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 50%;
+  padding-left: 50px; }
+  .btn-peagreen:hover {
+    color: #111;
+    background-color: #5c9219;
+    border-color: #253b0a; }
+  .btn-peagreen:focus, .btn-peagreen.focus {
+    box-shadow: 0 0 0 3px rgba(65, 103, 17, 0.5); }
+  .btn-peagreen.disabled, .btn-peagreen:disabled {
+    background-color: #78be20;
+    border-color: #416711; }
+  .btn-peagreen:active, .btn-peagreen.active,
+  .show > .btn-peagreen.dropdown-toggle {
+    background-color: #5c9219;
+    background-image: none;
+    border-color: #253b0a; }
+  .btn-peagreen:hover {
+    color: #fff; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

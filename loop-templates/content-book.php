@@ -4,10 +4,12 @@
  *
  * @package understrap
  */
-
-$author = get_post(get_post_meta(get_the_ID(), 'author', true));
-$author->image = get_the_post_thumbnail($author->ID, 'book-cover');
-					
+if (get_post_meta(get_the_ID(), 'author', true)) {
+	$author = get_post(get_post_meta(get_the_ID(), 'author', true));
+	$author->image = get_the_post_thumbnail($author->ID, 'book-cover');
+} else {
+	$author = new WP_Error("404", "Author Not Found");
+}
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
@@ -27,15 +29,15 @@ $author->image = get_the_post_thumbnail($author->ID, 'book-cover');
 				<div class="book-cover-wrapper" style="border:1px solid black;padding:2px;margin-bottom:2px;">
 					<?php the_post_thumbnail( 'book-cover' ); ?>
 				</div>
-				<div class="pea-green-link-wrapper">
-					<?php
-						$link = get_post_meta( get_the_ID(), 'peagreenlink', true );
-						$image = wp_get_attachment_image( 37, 'thumbnail', true, ['style'=>"width:35px"]);
-						echo ($image);
-					?>
-					<a href="<?php echo $link; ?>">Buy with Pea Green Boat Books</a>
+				<?php
+					if (get_post_meta(get_the_ID(), 'peagreenlink', true)): ?>
+				<div class="pea-green-boat-link-wrapper">
+					<a class="btn btn-peagreen btn-block" href="<?php echo get_post_meta(get_the_ID(), 'peagreenlink', true); ?>">Purchase Signed Copy</a>
 				</div>
+				<?php endif; ?>
 			</div>
+
+			<?php if (!is_wp_error($author)): ?>
 			<div class="col-md-12">
 				<h2>About The Author</h2>
 				<div class="row" style="background: white;">
@@ -49,6 +51,7 @@ $author->image = get_the_post_thumbnail($author->ID, 'book-cover');
 					</div>
 				</div>
 			</div>
+			<?php endif; ?>
 		</div>
 
 		<?php

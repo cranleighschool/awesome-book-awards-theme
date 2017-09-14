@@ -27,3 +27,18 @@ body {
 		font-size: 0.8em;
 	}
 }
+.btn-peagreen {
+	@include button-variant(#78be20, darken(#78be20, 20%), darken(#78be20, 10%));
+	color:#fff;
+	white-space: normal;
+	text-transform: uppercase;
+	font-family:"AspW-Rg";
+	background-image: url('../img/PGBB-Logo-50px.png');
+	background-repeat: no-repeat;
+	background-position-x: 10px;
+	background-position-y: 50%;
+	padding-left:50px;
+	&:hover {
+		color:#fff;
+	}
+}
