@@ -71,7 +71,7 @@ abstract class BaseType {
 		return $this;
 	}
 
-	public function relatedPosts(int $post_id, int $num=4, $wp_query) {
+	public function relatedPosts(int $post_id, int $num=4, $wp_query=[]) {
 		$args = [
 			"posts_per_page" => $num,
 			"post__not_in" => [$post_id]
@@ -92,7 +92,7 @@ abstract class BaseType {
 		];
 
 		$args = array_merge($default, $args);
-		echo "<pre>";var_dump($args);echo "</pre>";
+
 		return new WP_Query($args);
 
 	}

@@ -35,7 +35,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 					?>
 
 				<?php endwhile; // end of the loop. ?>
-				<?php get_template_part( 'global-templates/relatedposts', 'book'); ?>
 
 			</main><!-- #main -->
 

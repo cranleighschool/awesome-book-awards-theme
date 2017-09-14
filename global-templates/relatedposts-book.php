@@ -1,7 +1,8 @@
 <?php
 
-	$years = wp_get_post_terms( get_the_id(), 'year' );
-	$query = [];
+	$years = wp_get_post_terms( get_the_ID(), 'year' );
+
+$query = [];
 	foreach ($years as $year):
 		$query[] = $year->slug;
 	endforeach;
@@ -23,19 +24,14 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<h2>Other Books from </h2>
+		<h2>Other Books from <?php echo $years[0]->name; ?></h2>
 	</div>
 	<?php
-//	$book = new \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book();
+	$book = new \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book();
 
-//	$relatedPosts = $book->relatedPosts(get_the_ID(), 4, $wp_query);
-
-
-//	echo '<pre>';var_dump($relatedPosts);echo '</pre>';
-
-	$query = new WP_Query($wp_query);
-	while($query->have_posts()):
-		$query->the_post();
+	$relatedPosts = $book->relatedPosts(get_the_ID(), 4);
+//
+	while($relatedPosts->have_posts()): $relatedPosts->the_post();
 		echo "<div class='col-md-3'>".get_the_title()."</div>";
 	endwhile;
 	?>
