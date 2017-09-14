@@ -46,7 +46,7 @@ class Setup {
 		wp_enqueue_style('bentonsans', '//cdn.cranleigh.org/fonts/bentonsans/fontface.css');
 	}
 	public function googleanalytics() {
-		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org')
+		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in())
 			return false;
 		?>
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
