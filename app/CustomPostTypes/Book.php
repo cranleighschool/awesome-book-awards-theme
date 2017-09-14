@@ -19,7 +19,7 @@ class Book extends BaseType {
 		$this->setIcon('dashicons-book-alt');
 		$this->setOptions(['rewrite' => ['slug' => 'book']]);
 		$this->setLabels(["featured_image" => "Book Cover"]);
-
+		$this->addSupportFor("page-attributes");
 	}
 
 	public function render() {

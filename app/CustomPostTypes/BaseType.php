@@ -56,6 +56,10 @@ abstract class BaseType {
 
 	abstract function render();
 
+	protected function addSupportFor($value) {
+		$this->options['supports'][] = $value;
+	}
+
 	/**
 	 * @param string $icon
 	 */
