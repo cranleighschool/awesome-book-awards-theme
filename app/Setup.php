@@ -20,7 +20,9 @@ class Setup {
 		add_image_size( 'book-cover', 734, 1124, true );
 		add_action('after_setup_theme', array(self::class, 'understrap_setup'));
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
+		add_action('wp_head', array(self::class, 'googleanalytics'));
 	}
+
 	static public function CustomPostTypes() {
 		$book = new Book();
 		$author = new Author();
@@ -43,7 +45,21 @@ class Setup {
 		wp_enqueue_style('aspect-font', '//cdn.cranleigh.org/css/AspW-Rg.css');
 		wp_enqueue_style('bentonsans', '//cdn.cranleigh.org/fonts/bentonsans/fontface.css');
 	}
+	public function googleanalytics() {
+		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org')
+			return false;
+		?>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-42791789-4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments)};
+	gtag('js', new Date());
 
+	gtag('config', 'UA-42791789-4');
+</script>
+<?php
+	}
 	public function understrap_setup() {
 		/*
 		 * Make theme available for translation.
