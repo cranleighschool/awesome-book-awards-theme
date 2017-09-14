@@ -53,19 +53,5 @@ class Book extends BaseType {
 	}
 
 
-	public function getPosts(array $args) {
-		$default = [
-			"posts_per_page" => -1,
-			"post_type" => $this->post_type_key,
-			"orderby" => [
-				"menu_order" => "ASC",
-				"title" => "ASC"
-			]
-		];
 
-		$args = array_merge($default, $args);
-
-		return new WP_Query($args);
-
-	}
 }

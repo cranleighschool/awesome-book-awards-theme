@@ -11,6 +11,7 @@ namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 use CranleighSchool\AwesomeBookAwardsTheme\GetPostMeta;
 use PostTypes\PostType;
 use WP_Error;
+use WP_Query;
 use YeEasyAdminNotices\V1\AdminNotice;
 
 abstract class BaseType {
@@ -68,6 +69,32 @@ abstract class BaseType {
 		$this->post = get_post($post_id);
 		$this->meta = new GetPostMeta($post_id);
 		return $this;
+	}
+
+	public function relatedPosts(int $post_id, int $num=4, $wp_query) {
+		$args = [
+			"posts_per_page" => $num,
+			"post__not_in" => [$post_id]
+		];
+		$args = array_merge($args, $wp_query);
+		$books = $this->getPosts($args);
+
+		return $books;
+	}
+	public function getPosts(array $args) {
+		$default = [
+			"posts_per_page" => -1,
+			"post_type" => $this->post_type_key,
+			"orderby" => [
+				"menu_order" => "ASC",
+				"title" => "ASC"
+			]
+		];
+
+		$args = array_merge($default, $args);
+		echo "<pre>";var_dump($args);echo "</pre>";
+		return new WP_Query($args);
+
 	}
 
 	/**
