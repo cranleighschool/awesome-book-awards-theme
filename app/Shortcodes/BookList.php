@@ -36,13 +36,13 @@ class BookList extends BaseShortcode {
 		$posts = $books->getPosts([
 			"tax_query" => [
 				[
-					"taxonomy" => 'year',
+					"taxonomy" => 'awesome-year',
 					'field' => 'slug',
 					'terms' => $year
 				]
 			]
 		]);
-		$taxonomy = get_term_by('slug', $year, 'year');
+		$taxonomy = get_term_by('slug', $year, 'awesome-year');
 
 		ob_start();
 

@@ -20,6 +20,6 @@ class School extends BaseType {
 	}
 
 	public function render() {
-		$this->post_type->taxonomy('year');
+		$this->post_type->taxonomy('awesome-year');
 	}
 }

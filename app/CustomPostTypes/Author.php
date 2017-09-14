@@ -23,7 +23,7 @@ class Author extends BaseType {
 
 	public function render() {
 		$this->post_type->columns()->hide(['author', 'date']);
-		$this->post_type->taxonomy('year');
+		$this->post_type->taxonomy('awesome-year');
 	}
 
 }

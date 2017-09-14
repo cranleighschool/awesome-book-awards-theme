@@ -1,6 +1,6 @@
 <?php
 
-	$years = wp_get_post_terms( get_the_ID(), 'year' );
+	$years = wp_get_post_terms( get_the_ID(), 'awesome-year' );
 
 $query = [];
 	foreach ($years as $year):
@@ -10,7 +10,7 @@ $query = [];
 	$tax_query = [
 		"relation" => "OR",
 		[
-			'taxonomy' => 'year',
+			'taxonomy' => 'awesome-year',
 			'field' => 'slug',
 			'terms' => $query
 		]

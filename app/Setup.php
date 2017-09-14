@@ -22,9 +22,13 @@ class Setup {
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 	}
 	static public function CustomPostTypes() {
-		(new Book())->init();
-		(new Author())->init();
-		(new School())->init();
+		$book = new Book();
+		$author = new Author();
+		$school = new School();
+
+		$book->init();
+		$author->init();
+		$school->init();
 	}
 	static public function ThemeUpdateChecker() {
 		new ThemeUpdateChecker();

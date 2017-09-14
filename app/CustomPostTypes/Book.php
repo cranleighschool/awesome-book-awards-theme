@@ -48,7 +48,7 @@ class Book extends BaseType {
 			'score' => ['score', true],
 		]);
 
-		$this->post_type->taxonomy('year');
+		$this->post_type->taxonomy('awesome-year');
 
 	}
 
