@@ -17,6 +17,7 @@ class Setup {
 
 
 	static public function run() {
+		add_image_size( 'book-cover', 734, 1124, true );
 		add_action('after_setup_theme', array(self::class, 'understrap_setup'));
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 	}
@@ -27,6 +28,9 @@ class Setup {
 	}
 	static public function ThemeUpdateChecker() {
 		new ThemeUpdateChecker();
+	}
+	static public function Shortcodes() {
+		new Shortcodes\BookList();
 	}
 	static public function MetaBoxes() {
 		new MetaBoxes();

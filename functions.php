@@ -11,6 +11,7 @@ Setup::run();
 Setup::CustomPostTypes();
 Setup::MetaBoxes();
 Setup::ThemeUpdateChecker();
+Setup::Shortcodes();
 /**
  * Theme setup and custom theme supports.
  */

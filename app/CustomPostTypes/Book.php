@@ -28,13 +28,22 @@ class Book extends BaseType {
 			'score' => __("Book's Score"),
 			'book_author' => __("Book's Author")
 		]);
+
 		$this->post_type->columns()->populate('score', function($column, $post_id) {
 			echo get_post_meta($post_id, 'score', true); // . '/10';
 		});
+
 		$this->post_type->columns()->populate('book_author', function($column, $post_id) {
-			echo '<a href="'.get_edit_post_link(get_post_meta($post_id, 'author', true)).'">'.get_the_title(get_post_meta($post_id, 'author', true)).'</a>';
+			$author_id = get_post_meta($post_id, 'author', true);
+			if ($author_id) {
+				echo '<a href="' . get_edit_post_link( $author_id ) . '">' . get_the_title( $author_id ) . '</a>';
+			} else {
+				echo 'Not Set';
+			}
 		});
+
 		$this->post_type->columns()->hide(['date']);
+
 		$this->post_type->columns()->sortable([
 			'score' => ['score', true],
 		]);
@@ -43,16 +52,17 @@ class Book extends BaseType {
 
 	}
 
-	public function getPosts() {
-		$args = [
+	public function getPosts(array $args) {
+		$default = [
 			"posts_per_page" => -1,
 			"post_type" => $this->post_type_key,
 			"orderby" => [
 				"menu_order" => "ASC",
 				"title" => "ASC"
 			]
-
 		];
+
+		$args = array_merge($default, $args);
 
 		return new WP_Query($args);
 
