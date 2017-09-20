@@ -11,7 +11,7 @@ namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 
 class School extends BaseType {
 
-	protected $post_type_key = "school";
+	protected static $post_type_key = "school";
 
 	public function setup() {
 		$this->setIcon('dashicons-building');

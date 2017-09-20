@@ -12,7 +12,7 @@ use WP_Query;
 
 class Book extends BaseType {
 
-	protected $post_type_key = "book";
+	protected static $post_type_key = "book";
 
 	public function setup() {
 

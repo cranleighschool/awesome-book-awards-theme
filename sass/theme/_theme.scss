@@ -7,6 +7,13 @@ body {
 		font-family: "AspW-Rg";
 		text-transform: uppercase;
 	}
+	a {
+		color:$dark-blue;
+		text-decoration: underline;
+		&:hover{
+			color: $light-blue;
+		}
+	}
 }
 
 
@@ -20,12 +27,27 @@ body {
 		margin-top:50px;
 	}
 }
+nav.navbar{
+	background: $light-blue;
+	a {
+		color:#fff;
+		text-decoration: none;
+	}
+}
 #wrapper-footer {
-	background: #343a40;
+	background: $light-blue;
 	color:#fff;
 	.site-info {
 		font-size: 0.8em;
 	}
+	a {
+		text-decoration: underline;
+		color:#fff;
+		&:hover {
+			color: darken(#fff, 10%);
+		}
+	}
+
 }
 .btn-peagreen {
 	@include button-variant(#78be20, darken(#78be20, 20%), darken(#78be20, 10%));

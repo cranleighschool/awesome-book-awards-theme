@@ -11,7 +11,9 @@ namespace CranleighSchool\AwesomeBookAwardsTheme;
 
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\FAQ;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\School;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Sponsor;
 
 class Setup {
 
@@ -27,10 +29,14 @@ class Setup {
 		$book = new Book();
 		$author = new Author();
 		$school = new School();
+		$faq = new FAQ();
+		$sponsor = new Sponsor();
 
 		$book->init();
 		$author->init();
 		$school->init();
+		$faq->init();
+		$sponsor->init();
 	}
 	static public function ThemeUpdateChecker() {
 		new ThemeUpdateChecker();

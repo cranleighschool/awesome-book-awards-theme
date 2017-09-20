@@ -11,7 +11,7 @@ namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 
 class Author extends BaseType {
 
-	protected $post_type_key = "book_author";
+	protected static $post_type_key = "book_author";
 
 	public function setup() {
 		global $wp_rewrite;
@@ -24,6 +24,14 @@ class Author extends BaseType {
 	public function render() {
 		$this->post_type->columns()->hide(['author', 'date']);
 		$this->post_type->taxonomy('awesome-year');
+
+		$this->post_type->columns()->add([
+			'mugshot' => __("Mugshot"),
+		]);
+
+		$this->post_type->columns()->populate('mugshot', function($column, $post_id) {
+			echo get_the_post_thumbnail($post_id, [100,100]);
+		});
 	}
 
 }
