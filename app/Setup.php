@@ -23,6 +23,7 @@ class Setup {
 		add_action('after_setup_theme', array(self::class, 'understrap_setup'));
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 		add_action('wp_head', array(self::class, 'googleanalytics'));
+		add_action('init', array(self::class, 'ryanbenhase_unregister_taxes'));
 	}
 
 	static public function CustomPostTypes() {
@@ -37,6 +38,12 @@ class Setup {
 		$school->init();
 		$faq->init();
 		$sponsor->init();
+
+
+	}
+	static public function ryanbenhase_unregister_taxes() {
+		unregister_taxonomy_for_object_type( 'post_tag', 'post' );
+		unregister_taxonomy_for_object_type( 'category', 'post' );
 	}
 	static public function ThemeUpdateChecker() {
 		new ThemeUpdateChecker();

@@ -18,7 +18,7 @@
 		<div class="row">
 
 			<div class="col-md-4 pull-right">
-				<div class="book-cover-wrapper">
+				<div class="author-mugshot-wrapper">
 					<?php the_post_thumbnail( 'book-cover' ); ?>
 				</div>
 				<?php
@@ -30,7 +30,7 @@
 			</div>
 
 			<div class="col-md-8">
-				<h3>Biography</h3>
+				<h2>Biography</h2>
 				<?php the_content(); ?>
 			</div>
 

@@ -15,6 +15,19 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 
 	<header class="entry-header">
 
+		<div class="entry-meta">
+
+			<?php
+				$years = wp_get_post_terms(get_the_ID(), 'awesome-year');
+				if ($years):
+					echo "Shortlisted: ";
+					$terms_list = get_the_term_list( get_the_ID(), 'awesome-year', '', ', ', '' );
+					echo "<strong>".strip_tags( $terms_list )."</strong>";
+
+				endif;
+?>
+		</div><!-- .entry-meta -->
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
@@ -38,16 +51,18 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 			</div>
 
 			<?php if (!is_wp_error($author)): ?>
-			<div class="col-md-12 box-shadow widget">
-				<h2>About The Author</h2>
-				<div class="row">
-					<div class="col-md-4">
-						<?php echo $author->image; ?>
-					</div>
-						
-					<div class="col-md-8">
-						<h3 style="text-decoration: underline;"><?php echo $author->post_title; ?></h3>
-						<?php echo wpautop( $author->post_content ); ?>
+			<div class="col-md-12">
+				<div class="widget box-shadow">
+					<h2>About The Author</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<?php echo $author->image; ?>
+						</div>
+
+						<div class="col-md-8">
+							<h3><?php echo $author->post_title; ?></h3>
+							<?php echo wpautop( \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::wp_first_paragraph_excerpt($author->ID) ); ?>
+						</div>
 					</div>
 				</div>
 			</div>

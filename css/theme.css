@@ -9147,10 +9147,21 @@ body {
       color: #8CB7E8; }
   body p {
     margin-bottom: 2rem; }
+  body strong {
+    font-family: "Benton Sans Reg";
+    font-weight: normal; }
 
 @media (max-width: 991px) {
   h3 {
     font-size: 1.2em; } }
+
+.signpost {
+  font-family: AspW-Rg;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 10px; }
 
 #masthead {
   background-repeat: repeat-x;
@@ -9180,12 +9191,12 @@ nav.navbar {
     #wrapper-footer a:hover {
       color: #e6e6e6; }
 
-.book-cover-wrapper {
-  border: 1px solid black;
-  padding: 2px;
-  margin-bottom: 20px; }
+.author-mugshot-wrapper img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 
-.box-shadow, .featured-image {
+.box-shadow, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9200,21 +9211,24 @@ nav.navbar {
   .entry-meta .entry-date.published {
     display: none; }
 
+.entry-content {
+  padding: 10px; }
+
 .featured-image {
   margin-left: 10px;
   max-width: 33.3%;
   float: right; }
 
-.widget, .entry-meta, .featured-image {
+.widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
   padding: 10px;
   margin-bottom: 20px; }
-  .widget.no-padding, .no-padding.entry-meta, .no-padding.featured-image {
+  .widget.no-padding, .no-padding.signpost, .no-padding.book-cover-wrapper, .no-padding.author-mugshot-wrapper, .no-padding.featured-image {
     padding: 0px; }
   @media (max-width: 991px) {
-    .widget, .entry-meta, .featured-image {
+    .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
       padding: 7.5px; } }
   @media (max-width: 767px) {
-    .widget, .entry-meta, .featured-image {
+    .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
       padding: 5px; } }
 
 .btn-peagreen {
@@ -9222,6 +9236,7 @@ nav.navbar {
   background-color: #78be20;
   border-color: #416711;
   color: #fff;
+  text-decoration: none;
   white-space: normal;
   text-transform: uppercase;
   font-family: "AspW-Rg";

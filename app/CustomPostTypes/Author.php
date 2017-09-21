@@ -19,6 +19,7 @@ class Author extends BaseType {
 		$wp_rewrite->author_base = "hiddenauthors";
 		$this->setIcon('dashicons-admin-users');
 		$this->setOptions(['rewrite' => ['slug' => 'author']]);
+		$this->addSupportFor("excerpt");
 		$this->setLabels(["featured_image" => "Author Headshot", 'name' => 'Authors', 'menu_name' => 'Authors', 'all_items' => 'Authors']);
 	}
 
@@ -69,17 +70,36 @@ class Author extends BaseType {
 		wp_reset_query();
 		wp_reset_postdata();
 	}
+	public static function getRelatedAuthors($id) {
+		if (get_post_type($id)==='post') {
+			foreach (get_post_meta($id, 'related_authors', true) as $author_id):
+				echo self::signpost($author_id);
+			endforeach;
+		}
+	}
+	public static function signpost($author_id, string $text=null) {
+		$author = get_post($author_id);
+		if ($text === null) {
+			$text = "More About ".$author->post_title;
+		}
+		if ($text === "Read More...") {
+			$style = "signpost pull-right";
+		} else {
+			$style = "signpost";
+		}
 
+		return '<a class="'.$style.'" href="'.get_permalink($author).'">'.$text.' <i class="fa fa-fw fa-chevron-right"></i></a>';
+	}
 	public static function getNews() {
 		global $post;
 		$args = [
 			"post_type" => 'post',
 			"posts_per_page" => -1,
-			"tax_query" => [
+			"meta_query" => [
 				[
-					"taxonomy" => "post_tag",
-					"terms" => $post->post_name,
-					"field" => "slug"
+					"key" => "related_authors",
+					"value" => get_the_ID(),
+					"compare" => "LIKE"
 				]
 			]
 		];
@@ -97,6 +117,34 @@ class Author extends BaseType {
 		wp_reset_query();
 		wp_reset_postdata();
 
+	}
+
+	public static function wp_first_paragraph_excerpt( $id=null ) {
+		// Set $id to the current post by default
+		if( !$id ) {
+			global $post;
+			$id = get_the_id();
+		}
+
+		// Get the post content
+		$content = get_post_field( 'post_content', $id );
+		$content = apply_filters( 'the_content', strip_shortcodes( $content ) );
+
+		// Remove all tags, except paragraphs
+		$excerpt = strip_tags( $content, '<p></p>' );
+
+		// Remove empty paragraph tags
+		$excerpt = force_balance_tags( $excerpt );
+		$excerpt = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $excerpt );
+		$excerpt = preg_replace( '~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $excerpt );
+
+		// Get the first paragraph
+		$excerpt = substr( $excerpt, 0, strpos( $excerpt, '</p>' ) + 4 );
+
+		// Remove remaining paragraph tags
+		$excerpt = strip_tags( $excerpt );
+
+		return $excerpt."<br />".self::signpost($id, "Read More...");
 	}
 
 }

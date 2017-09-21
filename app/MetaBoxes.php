@@ -16,8 +16,27 @@ class MetaBoxes {
 		add_filter( 'rwmb_meta_boxes', array($this,'book') );
 		add_filter( 'rwmb_meta_boxes', array($this, 'book_scoring') );
 		add_filter( 'rwmb_meta_boxes', array($this, 'sponsors') );
+		add_filter( 'rwmb_meta_boxes', array($this, 'authors_news') );
 	}
 
+	public function authors_news( $meta_boxes ) {
+		$meta_boxes[] = [
+			"title" => __("Related Authors", 'cranleigh-2016'),
+			"post_types" => ["post"],
+			"priority" => 'high',
+			'context' => 'side',
+			'fields' => [
+				[
+					'id' => 'related_authors',
+					'name' => 'Related Authors',
+					'type' => 'post',
+					'post_type' => 'book_author',
+					'clone' => true
+				]
+			]
+		];
+		return $meta_boxes;
+	}
 	public function sponsors( $meta_boxes ) {
 		$meta_boxes[] = [
 			"title" => __( "Meta", 'cranleigh-2016'),
