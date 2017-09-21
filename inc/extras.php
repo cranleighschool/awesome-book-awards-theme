@@ -95,10 +95,12 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 						<?php
 
 							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+								$prevthumbnail = '<a style="display:block" href="'.get_permalink($previous->ID).'">'.get_the_post_thumbnail($previous->ID, [100,154]).'</a>';
+								previous_post_link( '<span class="nav-previous">%link '.$prevthumbnail.'</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 							}
 							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+								$nextthumbnail = '<a style="display:block;" href="'.get_permalink($next->ID).'">'.get_the_post_thumbnail($next->ID, [100,154]).'</a>';
+								next_post_link( '<span class="nav-next">%link '.$nextthumbnail.'</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
 							}
 						?>
 					</div><!-- .nav-links -->

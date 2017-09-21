@@ -52,6 +52,4 @@ class Book extends BaseType {
 
 	}
 
-
-
 }

@@ -26,21 +26,21 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 				<?php the_content(); ?>
 			</div>
 			<div class="col-md-4">
-				<div class="book-cover-wrapper" style="border:1px solid black;padding:2px;margin-bottom:2px;">
+				<div class="book-cover-wrapper">
 					<?php the_post_thumbnail( 'book-cover' ); ?>
 				</div>
 				<?php
 					if (get_post_meta(get_the_ID(), 'peagreenlink', true)): ?>
-				<div class="pea-green-boat-link-wrapper">
+				<div class="pea-green-boat-link-wrapper widget no-padding">
 					<a class="btn btn-peagreen btn-block" href="<?php echo get_post_meta(get_the_ID(), 'peagreenlink', true); ?>">Purchase Signed Copy</a>
 				</div>
 				<?php endif; ?>
 			</div>
 
 			<?php if (!is_wp_error($author)): ?>
-			<div class="col-md-12">
+			<div class="col-md-12 box-shadow widget">
 				<h2>About The Author</h2>
-				<div class="row" style="background: white;">
+				<div class="row">
 					<div class="col-md-4">
 						<?php echo $author->image; ?>
 					</div>

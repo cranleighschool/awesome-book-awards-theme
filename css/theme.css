@@ -9171,6 +9171,22 @@ nav.navbar {
     #wrapper-footer a:hover {
       color: #e6e6e6; }
 
+.book-cover-wrapper {
+  border: 1px solid black;
+  padding: 2px;
+  margin-bottom: 20px; }
+
+.box-shadow {
+  box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06); }
+
+.widget {
+  padding: 10px;
+  margin-bottom: 20px; }
+  .widget.no-padding {
+    padding: 0px; }
+
 .btn-peagreen {
   color: #111;
   background-color: #78be20;

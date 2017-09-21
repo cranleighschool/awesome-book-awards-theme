@@ -49,6 +49,23 @@ nav.navbar{
 	}
 
 }
+.book-cover-wrapper {
+	border:1px solid black;
+	padding:2px;
+	margin-bottom:20px;
+}
+.box-shadow {
+	box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+	-webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+}
+.widget {
+	padding:10px;
+	margin-bottom: 20px;
+	&:.no-padding {
+		padding:0px;
+	}
+}
 .btn-peagreen {
 	@include button-variant(#78be20, darken(#78be20, 20%), darken(#78be20, 10%));
 	color:#fff;
