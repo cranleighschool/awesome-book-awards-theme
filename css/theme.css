@@ -9186,6 +9186,12 @@ nav.navbar {
   margin-bottom: 20px; }
   .widget.no-padding {
     padding: 0px; }
+  @media (max-width: 991px) {
+    .widget {
+      padding: 7.5px; } }
+  @media (max-width: 767px) {
+    .widget {
+      padding: 5px; } }
 
 .btn-peagreen {
   color: #111;

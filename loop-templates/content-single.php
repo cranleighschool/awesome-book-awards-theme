@@ -20,12 +20,14 @@
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 
+		<?php echo get_the_post_thumbnail( $post->ID, 'book-cover', ['class'=>'pull-right box-shadow widget', 'style' => 'max-width:33%'] ); ?>
+
 		<?php the_content(); ?>
 
+		<div class="clear clearfix">&nbsp;</div>
 		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),

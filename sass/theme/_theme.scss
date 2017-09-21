@@ -62,10 +62,17 @@ nav.navbar{
 .widget {
 	padding:10px;
 	margin-bottom: 20px;
-	&:.no-padding {
+	&.no-padding {
 		padding:0px;
 	}
+	@include media-breakpoint-down(md) {
+		padding:7.5px;
+	}
+	@include media-breakpoint-down(sm) {
+		padding:5px;
+	}
 }
+
 .btn-peagreen {
 	@include button-variant(#78be20, darken(#78be20, 20%), darken(#78be20, 10%));
 	color:#fff;
