@@ -23,7 +23,10 @@
 
 	<div class="entry-content">
 
-		<?php echo get_the_post_thumbnail( $post->ID, 'book-cover', ['class'=>'pull-right box-shadow widget', 'style' => 'max-width:33%'] ); ?>
+		<?php
+		if (has_post_thumbnail()):
+			echo '<div class="featured-image">'.get_the_post_thumbnail( get_the_ID(), 'book-cover')."</div>";
+		endif; ?>
 
 		<?php the_content(); ?>
 

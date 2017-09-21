@@ -14,8 +14,15 @@ body {
 			color: $light-blue;
 		}
 	}
+	p {
+		margin-bottom: 2rem;
+	}
 }
-
+@include media-breakpoint-down(md) {
+	h3 {
+		font-size:1.2em;
+	}
+}
 
 #masthead {
 	background-repeat: repeat-x;
@@ -33,6 +40,10 @@ nav.navbar{
 		color:#fff;
 		text-decoration: none;
 	}
+}
+.navbar-toggler {
+	color:#fff;
+
 }
 #wrapper-footer {
 	background: $light-blue;
@@ -58,6 +69,27 @@ nav.navbar{
 	box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
 	-webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
 	-moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.entry-meta {
+	@extend .widget;
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: right;
+
+	.entry-date.published {
+		display:none;
+	}
+}
+.featured-image {
+	margin-left: 10px;
+	max-width: 33.3%;
+	float:right;
+	@extend .box-shadow;
+	@extend .widget;
 }
 .widget {
 	padding:10px;
