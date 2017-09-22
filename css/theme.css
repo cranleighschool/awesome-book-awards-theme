@@ -9181,6 +9181,8 @@ body {
   background-position: center center;
   min-height: 200px;
   background-image: url("../img/AwesomeBookAwardsHeader.jpg"); }
+  #masthead > .container {
+    padding-top: 50px; }
   #masthead .custom-logo-link {
     margin-top: 50px; }
 

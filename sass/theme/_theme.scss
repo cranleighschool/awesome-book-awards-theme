@@ -58,7 +58,9 @@ body {
 	background-position: center center;
 	min-height: 200px;
 	background-image: url('../img/AwesomeBookAwardsHeader.jpg');
-
+	& > .container {
+		padding-top:50px;
+	}
 	.custom-logo-link {
 		margin-top:50px;
 	}
