@@ -6,7 +6,7 @@
  */
 if (get_post_meta(get_the_ID(), 'author', true)) {
 	$author = get_post(get_post_meta(get_the_ID(), 'author', true));
-	$author->image = get_the_post_thumbnail($author->ID, 'book-cover');
+	$author->image = get_the_post_thumbnail($author->ID, [250,800], ['class'=>'author-mugshot-inline']);
 } else {
 	$author = new WP_Error("404", "Author Not Found");
 }
@@ -53,17 +53,12 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 			<?php if (!is_wp_error($author)): ?>
 			<div class="col-md-12">
 				<div class="widget box-shadow">
-					<h2>About The Author</h2>
-					<div class="row">
-						<div class="col-md-4">
-							<?php echo $author->image; ?>
-						</div>
+					<h2>About The Author: <?php echo $author->post_title; ?></h2>
 
-						<div class="col-md-8">
-							<h3><?php echo $author->post_title; ?></h3>
-							<?php echo wpautop( \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::wp_first_paragraph_excerpt($author->ID) ); ?>
-						</div>
-					</div>
+					<?php echo $author->image; ?>
+
+					<?php echo wpautop( \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::wp_first_paragraph_excerpt($author->ID) ); ?>
+					<div class="clear clearfix">&nbsp;</div>
 				</div>
 			</div>
 			<?php endif; ?>

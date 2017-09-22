@@ -50,9 +50,9 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-
 		<?php understrap_entry_footer(); ?>
-
 	</footer><!-- .entry-footer -->
-
+	<section id="relatedAuthors">
+		<?php \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getRelatedAuthors(get_the_ID()); ?>
+	</section>
 </article><!-- #post-## -->

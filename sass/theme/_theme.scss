@@ -96,6 +96,20 @@ nav.navbar{
 	//padding:2px;
 	//margin-bottom:20px;
 }
+.author-mugshot-inline {
+	float:left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-right:10px;
+	margin-bottom:10px;
+	@include media-breakpoint-down(sm) {
+		margin-right: 0px;
+		float:none;
+		margin:auto;
+		display:block;
+	}
+}
 .author-mugshot-wrapper {
 	@extend .widget;
 	@extend .box-shadow;

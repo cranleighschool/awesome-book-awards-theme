@@ -75,6 +75,46 @@ class Author extends BaseType {
 			foreach (get_post_meta($id, 'related_authors', true) as $author_id):
 				echo self::signpost($author_id);
 			endforeach;
+		} elseif (get_post_type($id)===self::getPostTypeKey()) {
+			$years = wp_get_post_terms($id, 'awesome-year');
+			$tax_query = [
+				"relation" => "OR"
+			];
+			foreach ($years as $year):
+				array_push($tax_query, [
+					"taxonomy" => "awesome-year",
+					"field" => "slug",
+					"terms" => $year->slug
+				]);
+			endforeach;
+
+			$args = [
+				"post_type" => self::getPostTypeKey(),
+				"posts_per_page" => 4,
+				"post__not_in" => [$id],
+				"tax_query" => $tax_query
+			];
+			$query = new WP_Query($args);
+			if ($query->have_posts()) {
+
+				echo "<br /><h3>Other Authors</h3>";
+				echo '<div class="swidget sbox-shadow">';
+				echo '<div class="row">';
+				while ( $query->have_posts() ): $query->the_post();
+					echo '<div class="col-sm-3">';
+					echo '<div class="widget box-shadow">';
+					echo '<a href="'.get_permalink().'">';
+					echo get_the_post_thumbnail(get_the_ID(), 'book-cover');
+					echo '</a>';
+					echo '</div>';
+					echo '<h4 class="text-center"><a href="'.get_permalink().'">'.get_the_title().'</a></h4>';
+					echo '</div>';
+				endwhile;
+				echo '</div>';
+				echo '</div>';
+			}
+			wp_reset_postdata();
+			wp_reset_query();
 		}
 	}
 	public static function signpost($author_id, string $text=null) {

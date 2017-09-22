@@ -81,6 +81,9 @@ if ( ! function_exists( 'change_logo_class' ) ) {
 if ( ! function_exists( 'understrap_post_nav' ) ) :
 
 	function understrap_post_nav() {
+		if (get_post_type(get_post())===\CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getPostTypeKey()) {
+			return false;
+		}
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
