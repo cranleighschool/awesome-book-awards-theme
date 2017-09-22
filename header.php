@@ -37,8 +37,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="img/awesome-book-awards-logo.png" class="img-fluid" />
-			<?php //the_custom_logo(); ?>
+			<?php $custom_logo_id = get_theme_mod('custom_logo');
+			$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+				echo $image[0]; ?>
 				</div>
 			</div></div>
 		</div>
