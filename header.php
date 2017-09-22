@@ -37,7 +37,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-			<?php the_custom_logo(); ?>
+					<img src="img/awesome-book-awards-logo.png" class="img-fluid" />
+			<?php //the_custom_logo(); ?>
 				</div>
 			</div></div>
 		</div>
