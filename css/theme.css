@@ -9153,7 +9153,17 @@ body {
 
 @media (max-width: 991px) {
   h3 {
-    font-size: 1.2em; } }
+    font-size: 1.2em; }
+  h2 {
+    font-size: 1.5em; }
+  h1 {
+    font-size: 1.7em; } }
+
+.thumbnail_next_prev {
+  display: block; }
+  @media (max-width: 991px) {
+    .thumbnail_next_prev {
+      display: none; } }
 
 .signpost {
   font-family: AspW-Rg;

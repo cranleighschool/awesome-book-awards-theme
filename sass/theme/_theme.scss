@@ -26,6 +26,18 @@ body {
 	h3 {
 		font-size:1.2em;
 	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h1 {
+		font-size:1.7em;
+	}
+}
+.thumbnail_next_prev {
+	display: block;
+	@include media-breakpoint-down(md) {
+		display:none;
+	}
 }
 .signpost {
 	font-family: AspW-Rg;

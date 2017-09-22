@@ -53,10 +53,10 @@ class BookList extends BaseShortcode {
 		echo '<div class="col-md-1"></div>';
 
 		while($posts->have_posts()): $posts->the_post();
-			echo '<div class="col-md-2">';
+			echo '<div class="col-md-2 col-6">';
 			echo "<h4 class='sr-only'>".get_the_title()."</h4>";
 			echo '<a href="'.get_permalink().'">';
-			the_post_thumbnail('book-cover');
+			the_post_thumbnail('book-cover', ["style" => "margin-bottom:10px;"]);
 			echo '</a>';
 			echo '</div>';
 		endwhile;

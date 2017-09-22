@@ -16,11 +16,17 @@
 
 	<div class="entry-content">
 		<div class="row">
+			<div class="col-md-8">
+				<h2 class="sr-only">Biography</h2>
+				<?php the_content(); ?>
+			</div>
 
-			<div class="col-md-4 pull-right">
+			<div class="col-md-4 pull-left">
+				<?php if (has_post_thumbnail()): ?>
 				<div class="author-mugshot-wrapper">
 					<?php the_post_thumbnail( 'book-cover' ); ?>
 				</div>
+				<?php endif; ?>
 				<?php
 				$news = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getNews();
 
@@ -29,10 +35,7 @@
 				?>
 			</div>
 
-			<div class="col-md-8">
-				<h2>Biography</h2>
-				<?php the_content(); ?>
-			</div>
+
 
 
 		</div>

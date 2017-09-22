@@ -95,11 +95,21 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 						<?php
 
 							if ( get_previous_post_link() ) {
-								$prevthumbnail = '<a style="display:block" href="'.get_permalink($previous->ID).'">'.get_the_post_thumbnail($previous->ID, [100,154]).'</a>';
+								if (get_post_type($previous)===\CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book::getPostTypeKey()) {
+									$prevthumbnail = '<a class="thumbnail_next_prev" href="' . get_permalink( $previous->ID ) . '">' . get_the_post_thumbnail( $previous->ID,
+											[ 100, 154 ] ) . '</a>';
+								} else {
+									$prevthumbnail = false;
+								}
 								previous_post_link( '<span class="nav-previous">%link '.$prevthumbnail.'</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 							}
 							if ( get_next_post_link() ) {
-								$nextthumbnail = '<a style="display:block;" href="'.get_permalink($next->ID).'">'.get_the_post_thumbnail($next->ID, [100,154]).'</a>';
+								if (get_post_type($next)===\CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book::getPostTypeKey()) {
+									$nextthumbnail = '<a class="thumbnail_next_prev" href="' . get_permalink( $next->ID ) . '">' . get_the_post_thumbnail( $next->ID,
+											[ 100, 154 ] ) . '</a>';
+								} else {
+									$nextthumbnail = false;
+								}
 								next_post_link( '<span class="nav-next">%link '.$nextthumbnail.'</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
 							}
 						?>
