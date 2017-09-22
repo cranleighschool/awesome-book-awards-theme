@@ -105,7 +105,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 							}
 							if ( get_next_post_link() ) {
 								if (get_post_type($next)===\CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book::getPostTypeKey()) {
-									$nextthumbnail = '<a class="thumbnail_next_prev" href="' . get_permalink( $next->ID ) . '">' . get_the_post_thumbnail( $next->ID,
+									$nextthumbnail = '<a class="thumbnail_next_prev next" href="' . get_permalink( $next->ID ) . '">' . get_the_post_thumbnail( $next->ID,
 											[ 100, 154 ] ) . '</a>';
 								} else {
 									$nextthumbnail = false;

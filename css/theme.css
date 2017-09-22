@@ -9164,6 +9164,8 @@ body {
   @media (max-width: 991px) {
     .thumbnail_next_prev {
       display: none; } }
+  .thumbnail_next_prev.next {
+    text-align: right; }
 
 .signpost {
   font-family: AspW-Rg;

@@ -38,6 +38,9 @@ body {
 	@include media-breakpoint-down(md) {
 		display:none;
 	}
+	&.next {
+		text-align: right;
+	}
 }
 .signpost {
 	font-family: AspW-Rg;
