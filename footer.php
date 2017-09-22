@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 <script>
-	var $buoop = {vs:{i:10,f:-4,o:-4,s:8,c:-4},unsecure:true,api:4};
+	var $buoop = {vs:{i:10,f:-4,o:-4,s:9,c:-4},reminder:0,text: "Our apologies! {brow_name} is considered an out of date web browser and not fully compatible with The Awesome Book Awards website. <br />Your experience will be hindered if you continue using this browser. Please <a{up_but}>Update</a>.", unsecure:true,api:4};
 	function $buo_f(){
 		var e = document.createElement("script");
 		e.src = "//browser-update.org/update.min.js";
