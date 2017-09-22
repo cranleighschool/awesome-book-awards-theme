@@ -8,7 +8,18 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
+		<div class="entry-meta">
 
+			<?php
+			$years = wp_get_post_terms(get_the_ID(), 'awesome-year');
+			if ($years):
+				echo "Shortlisted: ";
+				$terms_list = get_the_term_list( get_the_ID(), 'awesome-year', '', ', ', '' );
+				echo "<strong>".strip_tags( $terms_list )."</strong>";
+
+			endif;
+			?>
+		</div><!-- .entry-meta -->
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->

@@ -49,9 +49,11 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 				</div>
 				<?php endif; ?>
 			</div>
+		</div>
 
-			<?php if (!is_wp_error($author)): ?>
-			<div class="col-md-12">
+		<?php if (!is_wp_error($author)): ?>
+		<div class="row justify-content-sm-center">
+			<div class="col-sm-8">
 				<div class="widget box-shadow">
 					<h2>About The Author: <?php echo $author->post_title; ?></h2>
 
@@ -61,8 +63,8 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 					<div class="clear clearfix">&nbsp;</div>
 				</div>
 			</div>
-			<?php endif; ?>
 		</div>
+		<?php endif; ?>
 
 		<?php
 		wp_link_pages( array(
