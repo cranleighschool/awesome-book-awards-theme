@@ -47,7 +47,7 @@ class BookList extends BaseShortcode {
 
 		ob_start();
 
-		echo '<div class="row">';
+		echo '<div class="row books-shortlist">';
 		if ($this->atts['notitle']===false):
 			echo '<div class="col-md-12">';
 			echo '<h3>'.sprintf($this->atts['title'], $taxonomy->name).'</h3>';
