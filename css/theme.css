@@ -9161,6 +9161,11 @@ body {
   margin-right: 5px;
   margin-bottom: 5px; }
 
+@media (max-width: 767px) {
+  .entry-content img.wp-post-image {
+    float: none !important;
+    margin: 10px 10px !important; } }
+
 .btn.btn-secondary.understrap-read-more-link, .wpcf7 input.btn-secondary.understrap-read-more-link[type=submit] {
   background-color: #8CB7E8;
   border-color: #629ce0;
