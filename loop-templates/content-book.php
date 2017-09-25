@@ -45,7 +45,7 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 				<?php
 					if (get_post_meta(get_the_ID(), 'peagreenlink', true)): ?>
 				<div class="pea-green-boat-link-wrapper widget no-padding">
-					<a class="btn btn-peagreen btn-block" href="<?php echo get_post_meta(get_the_ID(), 'peagreenlink', true); ?>">Purchase Signed Copy</a>
+					<a class="btn btn-peagreen btn-block" href="<?php echo get_post_meta(get_the_ID(), 'peagreenlink', true); ?>">Purchase Book</a>
 				</div>
 				<?php endif; ?>
 			</div>

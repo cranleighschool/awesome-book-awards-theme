@@ -9,7 +9,8 @@
 namespace CranleighSchool\AwesomeBookAwardsTheme;
 
 
-use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Sponsor;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
 
 class MetaBoxes {
 	public function __construct() {
@@ -17,6 +18,7 @@ class MetaBoxes {
 		add_filter( 'rwmb_meta_boxes', array($this, 'book_scoring') );
 		add_filter( 'rwmb_meta_boxes', array($this, 'sponsors') );
 		add_filter( 'rwmb_meta_boxes', array($this, 'authors_news') );
+		add_filter( 'rwmb_meta_boxes', array($this, 'author_twitter'));
 	}
 
 	public function authors_news( $meta_boxes ) {
@@ -54,10 +56,28 @@ class MetaBoxes {
 
 		return $meta_boxes;
 	}
+
+	public function author_twitter( $meta_boxes ) {
+		$meta_boxes[] = [
+			"title" => __( "Twitter Handle", "cranleigh-2016"),
+			"post_types" => Author::getPostTypeKey(),
+			"priority" => "high",
+			"context" => "side",
+			"fields" => [
+				[
+					"id" => "author_twitter_handle",
+					"name" => "Author Twitter Handle",
+					"type" => "text"
+				]
+			]
+		];
+		return $meta_boxes;
+	}
+
 	public function sponsors( $meta_boxes ) {
 		$meta_boxes[] = [
 			"title" => __( "Meta", 'cranleigh-2016'),
-			"post_types" => Sponsor::getPostTypeKey(),
+			"post_types" => Partner::getPostTypeKey(),
 			'priority' => 'high',
 			'context' => 'side',
 			'fields' => [
