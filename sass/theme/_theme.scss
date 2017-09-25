@@ -214,7 +214,7 @@ nav.navbar{
 	}
 }
 .gallery {
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-up(sm) {
 		.size-thumbnail {
 			-webkit-border-radius: 5px;
 			-moz-border-radius: 5px;

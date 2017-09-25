@@ -9300,7 +9300,7 @@ nav.navbar {
     .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
       padding: 5px; } }
 
-@media (max-width: 767px) {
+@media (min-width: 576px) {
   .gallery .size-thumbnail {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
