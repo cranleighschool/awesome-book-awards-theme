@@ -19,7 +19,8 @@ class BookList extends BaseShortcode {
 	public function render($atts, $content=null) {
 		$this->atts = shortcode_atts(array(
 			'year' => null,
-			'title' => "Awesome Book Awards %s Shortlist"
+			'title' => "Awesome Book Awards %s Shortlist",
+			'notitle' => false
 		), $atts);
 
 		if ($this->atts['year'] !== null) {
@@ -47,9 +48,11 @@ class BookList extends BaseShortcode {
 		ob_start();
 
 		echo '<div class="row">';
-		echo '<div class="col-md-12">';
-		echo '<h3>'.sprintf($this->atts['title'], $taxonomy->name).'</h3>';
-		echo '</div>';
+		if ($this->atts['notitle']===false):
+			echo '<div class="col-md-12">';
+			echo '<h3>'.sprintf($this->atts['title'], $taxonomy->name).'</h3>';
+			echo '</div>';
+		endif;
 		echo '<div class="col-md-1"></div>';
 
 		while($posts->have_posts()): $posts->the_post();
