@@ -223,7 +223,12 @@ nav.navbar{
 blockquote {
 	border-left: none;
 	margin:50px;
-	
+	@extend .box-shadow;
+	padding:10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
 	&::before, &::after {
 		display: block;
 		position: relative;

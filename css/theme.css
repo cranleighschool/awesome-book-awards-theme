@@ -9249,7 +9249,7 @@ nav.navbar {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-.box-shadow, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image {
+.box-shadow, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, blockquote {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9322,7 +9322,11 @@ nav.navbar {
 
 blockquote {
   border-left: none;
-  margin: 50px; }
+  margin: 50px;
+  padding: 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
   blockquote::before, blockquote::after {
     display: block;
     position: relative;
