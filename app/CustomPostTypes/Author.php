@@ -130,7 +130,10 @@ class Author extends BaseType {
 
 		return '<a class="'.$style.'" href="'.get_permalink($author).'">'.$text.' <i class="fa fa-fw fa-chevron-right"></i></a>';
 	}
-	public static function getNews() {
+	public static function getNews($author_id=null) {
+		if ($author_id===null) {
+			$author_id = get_the_ID();
+		}
 		global $post;
 		$args = [
 			"post_type" => 'post',
@@ -138,7 +141,7 @@ class Author extends BaseType {
 			"meta_query" => [
 				[
 					"key" => "related_authors",
-					"value" => get_the_ID(),
+					"value" => $author_id,
 					"compare" => "LIKE"
 				]
 			]
@@ -156,6 +159,7 @@ class Author extends BaseType {
 		endif;
 		wp_reset_query();
 		wp_reset_postdata();
+		return true;
 
 	}
 

@@ -52,8 +52,8 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 		</div>
 
 		<?php if (!is_wp_error($author)): ?>
-		<div class="row justify-content-sm-center">
-			<div class="col-sm-8">
+		<div class="row ">
+			<div class="col-md-8">
 				<div class="widget box-shadow">
 					<h2>About The Author: <?php echo $author->post_title; ?></h2>
 
@@ -63,6 +63,11 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 					<div class="clear clearfix">&nbsp;</div>
 				</div>
 			</div>
+			<?php // if (\CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getNews($author->ID)): ?>
+			<div class="col-md-4">
+				<?php \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book::getNews(); ?>
+			</div>
+				<?php //endif; ?>
 		</div>
 		<?php endif; ?>
 
