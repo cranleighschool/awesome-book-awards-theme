@@ -9276,6 +9276,10 @@ nav.navbar {
   margin-left: 10px;
   max-width: 33.3%;
   float: right; }
+  @media (max-width: 767px) {
+    .featured-image {
+      float: none;
+      margin: 0px 20px; } }
 
 .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
   padding: 10px;
@@ -9327,6 +9331,9 @@ blockquote {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px; }
+  @media (max-width: 767px) {
+    blockquote {
+      margin: 20px; } }
   blockquote::before, blockquote::after {
     display: block;
     position: relative;
