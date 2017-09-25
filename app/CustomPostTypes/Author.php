@@ -107,10 +107,10 @@ class Author extends BaseType {
 			if ($query->have_posts()) {
 
 				echo "<br /><h3>Other Authors</h3>";
-				echo '<div class="swidget sbox-shadow">';
+				echo '<div id="related-authors">';
 				echo '<div class="row">';
 				while ( $query->have_posts() ): $query->the_post();
-					echo '<div class="col-md-3 col-sm-6">';
+					echo '<div class="col-md-3 col-sm-6 text-center">';
 					echo '<div class="widget box-shadow">';
 					echo '<a href="'.get_permalink().'">';
 					echo get_the_post_thumbnail(get_the_ID(), 'author-mugshot');

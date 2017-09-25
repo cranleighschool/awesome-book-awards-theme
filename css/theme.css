@@ -9325,6 +9325,9 @@ nav.navbar {
   .btn-peagreen:hover {
     color: #fff; }
 
+#related-authors .widget.box-shadow, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image {
+  display: inline-block; }
+
 blockquote {
   border-left: none;
   margin: 50px;

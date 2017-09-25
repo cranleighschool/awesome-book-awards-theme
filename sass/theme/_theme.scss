@@ -224,7 +224,11 @@ nav.navbar{
 	}
 }
 
-
+#related-authors {
+	.widget.box-shadow {
+		display:inline-block;
+	}
+}
 blockquote {
 	border-left: none;
 	margin:50px;
