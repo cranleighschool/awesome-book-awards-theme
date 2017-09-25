@@ -9136,7 +9136,8 @@ a.skip-link {
 
 body {
   background: #f1f1f1;
-  font-family: "Benton Sans Lt"; }
+  font-family: "Benton Sans Lt";
+  font-size: 1.1rem; }
   body h1, body h2, body h3, body h4, body h5 {
     font-family: "AspW-Rg";
     text-transform: uppercase; }
