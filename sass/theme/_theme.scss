@@ -24,6 +24,27 @@ body {
 		font-weight: normal;
 	}
 }
+
+.entry-content {
+	.attachment-author-mugshot {
+		float:left;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		padding:5px;
+		margin-right:5px;
+		margin-bottom:5px;
+	}
+}
+.btn.btn-secondary.understrap-read-more-link {
+	background-color: $light-blue;
+	border-color: darken($light-blue, 10%);
+	text-decoration: none;
+	&:hover, &:focus {
+		background-color: darken($light-blue, 10%);
+		border-color: $light-blue;
+	}
+}
 @include media-breakpoint-down(md) {
 	h3 {
 		font-size:1.2em;

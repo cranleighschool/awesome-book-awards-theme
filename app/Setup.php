@@ -20,6 +20,7 @@ class Setup {
 
 	static public function run() {
 		add_image_size( 'book-cover', 734, 1124, true );
+		add_image_size( 'author-mugshot', 200, 300, true);
 		add_action('after_setup_theme', array(self::class, 'understrap_setup'));
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 		add_action('wp_head', array(self::class, 'googleanalytics'));

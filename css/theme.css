@@ -9152,6 +9152,23 @@ body {
     font-family: "Benton Sans Reg";
     font-weight: normal; }
 
+.entry-content .attachment-author-mugshot {
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px; }
+
+.btn.btn-secondary.understrap-read-more-link, .wpcf7 input.btn-secondary.understrap-read-more-link[type=submit] {
+  background-color: #8CB7E8;
+  border-color: #629ce0;
+  text-decoration: none; }
+  .btn.btn-secondary.understrap-read-more-link:hover, .wpcf7 input.btn-secondary.understrap-read-more-link[type=submit]:hover, .btn.btn-secondary.understrap-read-more-link:focus, .wpcf7 input.btn-secondary.understrap-read-more-link[type=submit]:focus {
+    background-color: #629ce0;
+    border-color: #8CB7E8; }
+
 @media (max-width: 991px) {
   h3 {
     font-size: 1.2em; }
