@@ -9300,6 +9300,11 @@ nav.navbar {
     .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
       padding: 5px; } }
 
+.gallery .size-thumbnail {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
 .books-shortlist img {
   transition: transform 0.3s ease-in-out;
   -webkit-transition: transform 0.3s  ease-in-out;
