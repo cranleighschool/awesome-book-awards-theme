@@ -6,7 +6,7 @@
  */
 if (get_post_meta(get_the_ID(), 'author', true)) {
 	$author = get_post(get_post_meta(get_the_ID(), 'author', true));
-	$author->image = get_the_post_thumbnail($author->ID, [250,800], ['class'=>'author-mugshot-inline']);
+	$author->image = get_the_post_thumbnail($author->ID, 'author-mugshot', ['class'=>'author-mugshot-inline']);
 } else {
 	$author = new WP_Error("404", "Author Not Found");
 }

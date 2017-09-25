@@ -25,6 +25,15 @@ class Setup {
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 		add_action('wp_head', array(self::class, 'googleanalytics'));
 		add_action('init', array(self::class, 'ryanbenhase_unregister_taxes'));
+		add_filter( 'excerpt_more', array(self::class, 'modify_read_more_link') );
+
+	}
+	static public function modify_read_more_link($more) {
+		global $post;
+
+		$style = "signpost";
+
+		return '<a href="'.$style.'" href="'.get_permalink().'">Read More <i class="fa fa-fw fa-chevron-right"></i></a>';
 	}
 
 	static public function CustomPostTypes() {

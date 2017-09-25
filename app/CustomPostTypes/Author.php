@@ -126,6 +126,8 @@ class Author extends BaseType {
 			wp_reset_query();
 		}
 	}
+
+
 	public static function signpost($author_id, string $text=null) {
 		$author = get_post($author_id);
 		if ($text === null) {

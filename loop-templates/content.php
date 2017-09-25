@@ -38,7 +38,7 @@
 			'after'  => '</div>',
 		) );
 		?>
-
+		<div class="clear clearfix">&nbsp;</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
