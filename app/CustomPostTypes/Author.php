@@ -36,6 +36,15 @@ class Author extends BaseType {
 		});
 	}
 
+	public static function getTwitterTimeline($id=null) {
+		if ($id===null) {
+			$id = get_the_ID();
+		}
+		$twitter_screen_name = get_post_meta($id, 'author_twitter_handle', true);
+		if (!empty($twitter_screen_name))
+			return '<a class="twitter-timeline" href="https://twitter.com/'.$twitter_screen_name.'">Tweets by @'.$twitter_screen_name.'</a>';
+	}
+
 	public static function getBooks() {
 		$args = [
 			"post_type" => Book::getPostTypeKey(),
@@ -101,10 +110,10 @@ class Author extends BaseType {
 				echo '<div class="swidget sbox-shadow">';
 				echo '<div class="row">';
 				while ( $query->have_posts() ): $query->the_post();
-					echo '<div class="col-sm-3">';
+					echo '<div class="col-md-3 col-sm-6">';
 					echo '<div class="widget box-shadow">';
 					echo '<a href="'.get_permalink().'">';
-					echo get_the_post_thumbnail(get_the_ID(), 'book-cover');
+					echo get_the_post_thumbnail(get_the_ID(), 'author-mugshot');
 					echo '</a>';
 					echo '</div>';
 					echo '<h4 class="text-center"><a href="'.get_permalink().'">'.get_the_title().'</a></h4>';
