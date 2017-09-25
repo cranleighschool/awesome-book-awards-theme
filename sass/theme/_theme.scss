@@ -222,10 +222,8 @@ nav.navbar{
 
 blockquote {
 	border-left: none;
-	margin-left:50px;
-	margin-right:50px;
-
-
+	margin:50px;
+	
 	&::before, &::after {
 		display: block;
 		position: relative;
