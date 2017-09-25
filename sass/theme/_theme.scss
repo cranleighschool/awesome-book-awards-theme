@@ -188,7 +188,8 @@ nav.navbar{
 	@extend .widget;
 	@include media-breakpoint-down(sm) {
 		float:none;
-		margin: 0px 20px;
+		margin: 20px 10px;
+		max-width: 100%;
 	}
 }
 .widget {
