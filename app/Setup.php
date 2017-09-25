@@ -13,7 +13,7 @@ use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\FAQ;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\School;
-use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Sponsor;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
 
 class Setup {
 
@@ -31,13 +31,13 @@ class Setup {
 		$author = new Author();
 		$school = new School();
 		$faq = new FAQ();
-		$sponsor = new Sponsor();
+		$partner = new Partner();
 
 		$book->init();
 		$author->init();
 		$school->init();
 		$faq->init();
-		$sponsor->init();
+		$partner->init();
 
 
 	}

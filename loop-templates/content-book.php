@@ -63,11 +63,9 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 					<div class="clear clearfix">&nbsp;</div>
 				</div>
 			</div>
-			<?php // if (\CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getNews($author->ID)): ?>
 			<div class="col-md-4">
 				<?php \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book::getNews(); ?>
 			</div>
-				<?php //endif; ?>
 		</div>
 		<?php endif; ?>
 

@@ -9,13 +9,13 @@
 namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 
 
-class Sponsor extends BaseType {
+class Partner extends BaseType {
 
-	static public $post_type_key = "sponsor";
+	static public $post_type_key = "partner";
 
 	public function setup() {
 		$this->setIcon('dashicons-thumbs-up');
-		$this->setLabels(["featured_image" => "Sponsor Logo", "set_featured_image" => "Set Sponsor Logo"]);
+		$this->setLabels(["featured_image" => "Partner Logo", "set_featured_image" => "Set Partner Logo"]);
 	}
 
 	public function render() {
