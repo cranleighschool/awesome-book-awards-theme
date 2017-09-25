@@ -9320,6 +9320,43 @@ nav.navbar {
   .btn-peagreen:hover {
     color: #fff; }
 
+blockquote {
+  border-left: none;
+  margin-left: 50px;
+  margin-right: 50px; }
+  blockquote::before, blockquote::after {
+    display: block;
+    position: relative;
+    margin-top: -0.1875em;
+    font-family: "Benton Sans Reg";
+    font-size: 5em;
+    line-height: 0;
+    color: #ab162b; }
+  blockquote::before {
+    content: url("/wp-content/themes/awesome-book-awards/img/quoteopen.png");
+    float: left;
+    top: 0; }
+  blockquote::after {
+    content: url("/wp-content/themes/awesome-book-awards/img/quoteclose.png");
+    float: right;
+    bottom: 0; }
+  blockquote p {
+    margin: 0px 2em;
+    font-style: italic;
+    line-height: 1.35; }
+  blockquote footer {
+    margin: 0px 2.5em;
+    background: #fff;
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+    padding-left: 20px; }
+    blockquote footer:before {
+      content: '\2014 \00A0'; }
+  blockquote.blockquote-reverse {
+    border-right: none; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
