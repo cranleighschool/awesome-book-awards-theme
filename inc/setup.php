@@ -38,8 +38,9 @@ if ( ! function_exists( 'all_excerpts_get_more_link' ) ) {
 	 */
 	function all_excerpts_get_more_link( $post_excerpt ) {
 
-		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More...',
-		'understrap' ) . '</a></p>';
+		return $post_excerpt . ' [...]<p>'.\CranleighSchool\AwesomeBookAwardsTheme\Setup::modify_read_more_link().'</p>';
+//		<p><a class="btn btn-secondary understrap-read-more-link" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More...',
+//		'understrap' ) . '</a></p>';
 	}
 }
 add_filter( 'wp_trim_excerpt', 'all_excerpts_get_more_link' );
