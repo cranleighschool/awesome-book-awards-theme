@@ -9169,6 +9169,12 @@ body {
     background-color: #629ce0;
     border-color: #8CB7E8; }
 
+article.archive-article {
+  margin-bottom: 10px;
+  padding: 10px; }
+  article.archive-article .entry-content {
+    padding: 0px; }
+
 @media (max-width: 991px) {
   h3 {
     font-size: 1.2em; }
@@ -9243,13 +9249,18 @@ nav.navbar {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-.box-shadow, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image {
+.box-shadow, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px; }
+
+.no-box-shadow, article.archive-article .entry-content {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
 
 .entry-meta {
   font-size: 0.7em;
