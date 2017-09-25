@@ -65,6 +65,7 @@ class Setup {
 	public function enqueue_scripts() {
 		wp_enqueue_style('aspect-font', '//cdn.cranleigh.org/css/AspW-Rg.css');
 		wp_enqueue_style('bentonsans', '//cdn.cranleigh.org/fonts/bentonsans/fontface.css');
+
 	}
 	public function googleanalytics() {
 		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in())
@@ -78,6 +79,7 @@ class Setup {
 	gtag('js', new Date());
 
 	gtag('config', 'UA-42791789-4');
+
 </script>
 <?php
 	}

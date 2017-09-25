@@ -43,6 +43,9 @@
 
 				$books = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getBooks();
 
+				$twitter = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getTwitterTimeline();
+				echo $twitter;
+
 				?>
 			</div>
 

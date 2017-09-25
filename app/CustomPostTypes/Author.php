@@ -36,13 +36,13 @@ class Author extends BaseType {
 		});
 	}
 
-	public static function getTwitterTimeline($id=null) {
+	public static function getTwitterTimeline($num = 5, $id=null) {
 		if ($id===null) {
 			$id = get_the_ID();
 		}
 		$twitter_screen_name = get_post_meta($id, 'author_twitter_handle', true);
 		if (!empty($twitter_screen_name))
-			return '<a class="twitter-timeline" href="https://twitter.com/'.$twitter_screen_name.'">Tweets by @'.$twitter_screen_name.'</a>';
+			return '<div class="widget box-shadow no-padding"><a class="twitter-timeline" data-show-replies="false" data-chrome="nofooter" data-tweet-limit="5" data-link-color="#8CB7E8" href="https://twitter.com/'.$twitter_screen_name.'">Tweets by @'.$twitter_screen_name.'</a><small style="padding:10px;display:block;font-style: italic">Awesome Book Awards are not responsible for content tweeted by Authors.</small></div>';
 	}
 
 	public static function getBooks() {
