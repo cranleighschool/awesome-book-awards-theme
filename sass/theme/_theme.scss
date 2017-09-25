@@ -35,11 +35,12 @@ body {
 		margin-right:5px;
 		margin-bottom:5px;
 	}
-	
+
 	img.wp-post-image {
 		@include media-breakpoint-down(sm) {
 			float: none !important;
-			margin: 10px 10px !important;
+			margin: 10px auto !important;
+			display:block;
 		}
 	}
 }
