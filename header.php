@@ -39,7 +39,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-md-6">
 				<?php $custom_logo_id = get_theme_mod('custom_logo');
 				$image = wp_get_attachment_image_src($custom_logo_id, 'full');
-				echo '<img src="'.$image[0].'" class="img-fluid" />'; ?>
+				echo '<a href="'.site_url('/', 'https').'">';
+				echo '<img src="'.$image[0].'" class="img-fluid" />';
+				echo '</a>'; ?>
 					</div>
 				</div>
 			</div>
