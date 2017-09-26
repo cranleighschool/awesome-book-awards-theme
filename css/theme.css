@@ -9308,6 +9308,12 @@ nav.navbar {
 
 #faqs-accordion .card {
   margin-bottom: 10px; }
+  #faqs-accordion .card .card-header a {
+    text-decoration: none; }
+  #faqs-accordion .card .card-header [data-toggle="collapse"].collapsed i:before {
+    content: "\f054"; }
+  #faqs-accordion .card .card-header [data-toggle="collapse"] i:before {
+    content: "\f078"; }
 
 .books-shortlist img {
   transition: transform 0.3s ease-in-out;

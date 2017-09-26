@@ -52,8 +52,8 @@ class FAQs extends BaseShortcode {
 		<div class="card">
 			<div class="card-header" role="tab" id="<?php echo $id; ?>">
 				<h5 class="mb-0">
-					<a data-toggle="collapse" data-parent="<?php echo $parent_id; ?>" href="#<?php echo $href; ?>" aria-expanded="true" aria-controls="<?php echo $href; ?>">
-						<?php echo get_the_title(); ?>
+					<a data-toggle="collapse" class="collapsed" data-parent="<?php echo $parent_id; ?>" href="#<?php echo $href; ?>" aria-expanded="true" aria-controls="<?php echo $href; ?>">
+						<?php echo get_the_title(); ?> <i class="fa fa-fw fa-chevron-right"></i>
 					</a>
 				</h5>
 			</div>

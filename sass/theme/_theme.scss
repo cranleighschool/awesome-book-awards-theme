@@ -224,6 +224,19 @@ nav.navbar{
 }
 #faqs-accordion .card {
 	margin-bottom:10px;
+	.card-header {
+		a {
+			text-decoration: none;
+		}
+		[data-toggle="collapse"].collapsed i:before{
+			content: "\f054";
+		}
+		[data-toggle="collapse"] i:before{
+			content: "\f078";
+		}
+
+
+	}
 }
 .books-shortlist {
 	img {
