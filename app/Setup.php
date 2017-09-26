@@ -58,6 +58,7 @@ class Setup {
 	}
 	static public function Shortcodes() {
 		new Shortcodes\BookList();
+		new Shortcodes\FAQs();
 	}
 	static public function MetaBoxes() {
 		new MetaBoxes();
