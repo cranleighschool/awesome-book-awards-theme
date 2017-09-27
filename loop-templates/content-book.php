@@ -55,10 +55,11 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 		<div class="row ">
 			<div class="col-md-8">
 				<div class="widget box-shadow">
-					<h2>About The Author: <?php echo $author->post_title; ?></h2>
+
 
 					<?php echo $author->image; ?>
-
+					<h2>About The Author</h2>
+					<h3><?php echo $author->post_title; ?></h3>
 					<?php echo wpautop( \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::wp_first_paragraph_excerpt($author->ID) ); ?>
 					<div class="clear clearfix">&nbsp;</div>
 				</div>
