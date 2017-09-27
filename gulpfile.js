@@ -204,7 +204,8 @@ gulp.task('scripts', function() {
 
         basePaths.dev + 'js/skip-link-focus-fix.js',
 
-        basePaths.dev + 'js/twitter.js'
+        basePaths.dev + 'js/twitter.js',
+        basePaths.dev + 'js/externalLinks.js'
     ];
   gulp.src(scripts)
     .pipe(concat('theme.min.js'))

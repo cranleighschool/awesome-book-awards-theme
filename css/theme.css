@@ -9315,6 +9315,14 @@ nav.navbar {
   #faqs-accordion .card .card-header [data-toggle="collapse"] i:before {
     content: "\f078"; }
 
+.editorial {
+  text-align: right;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-top: 1px solid #000;
+  font-size: 0.8em;
+  font-style: italic; }
+
 .books-shortlist img {
   transition: transform 0.3s ease-in-out;
   -webkit-transition: transform 0.3s  ease-in-out;

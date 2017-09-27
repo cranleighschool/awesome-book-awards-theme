@@ -46,6 +46,8 @@ class Author extends BaseType {
 	}
 
 	public static function getBooks() {
+		global $post;
+		$author = $post;
 		$args = [
 			"post_type" => Book::getPostTypeKey(),
 			"posts_per_page" => -1,
@@ -57,19 +59,32 @@ class Author extends BaseType {
 				]
 			]
 		];
+
 		$query = new WP_Query($args);
 
 		if ($query->have_posts()):
-			echo "<div class='widget box-shadow'>";
-			echo "<h3>Books</h3>";
+
+			echo "<div class=''>";
+			echo "<h4>Shortlisted Books by ".$author->post_title."</h4>";
 			//echo "<ul>";
 			echo '<div class="row">';
 			while($query->have_posts()): $query->the_post();
-			//	echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+				$years = wp_get_post_terms(get_the_ID(), 'awesome-year');
+
+
 				echo '<div class="col-4">';
 				echo '<a href="'.get_permalink().'">';
 				echo get_the_post_thumbnail(get_the_ID(), 'book-cover', ["class"=>"img-responsive"]);
 				echo '</a>';
+				echo '</div><div class="col-8">';
+				echo '<h5>'.$post->post_title.'</h5>';
+				echo wpautop($post->post_content);
+				if ($years):
+					echo '<p class="editorial">This book was shortlisted in: ';
+					$terms_list = get_the_term_list( get_the_ID(), 'awesome-year', '', ', ', '' );
+					echo "<strong>".strip_tags( $terms_list )."</strong>";
+					echo '</p>';
+				endif;
 				echo '</div>';
 			endwhile;
 			echo "</div>";

@@ -29,7 +29,10 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h2 class="sr-only">Biography</h2>
-				<?php the_content(); ?>
+				<?php the_content();
+				$books = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getBooks();
+				?>
+
 			</div>
 
 			<div class="col-md-4 pull-left">
@@ -41,7 +44,6 @@
 				<?php
 				$news = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getNews();
 
-				$books = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getBooks();
 
 				$twitter = \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::getTwitterTimeline();
 				echo $twitter;
