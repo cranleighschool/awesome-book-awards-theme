@@ -89,16 +89,27 @@ blockquote {
 	&::after {
 		content: url('/wp-content/themes/awesome-book-awards/img/quoteclose.png');
 		float: right;
-		bottom: 0;
+		bottom: 10px;
 	}
 
 	p {
 		margin: 0px 2em;
 		font-style: italic;
 		line-height: 1.75;
+
+		img {
+			float:right;
+			max-width:100px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			margin:5px;
+
+		}
 	}
 
 	footer {
+		clear:both;
 		&:before {
 			content: '\2014 \00A0';
 		}
