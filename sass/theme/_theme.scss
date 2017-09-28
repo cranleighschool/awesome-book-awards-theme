@@ -1,28 +1,8 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+@import "typography";
+
 body {
 	background: #f1f1f1;
-	font-family:"Benton Sans Lt";
-	font-size:1.1rem;
-
-	h1,h2,h3,h4,h5 {
-		font-family: "AspW-Rg";
-		text-transform: uppercase;
-	}
-	a {
-		color:$dark-blue;
-		text-decoration: underline;
-		&:hover{
-			color: $light-blue;
-		}
-	}
-	p {
-		margin-bottom: 2rem;
-	}
-
-	strong {
-		font-family: "Benton Sans Reg";
-		font-weight: normal;
-	}
 }
 
 .entry-content {
@@ -238,14 +218,7 @@ nav.navbar{
 
 	}
 }
-.editorial {
-	text-align: right;
-	padding-top:5px;
-	margin-top:5px;
-	border-top: 1px solid #000;
-	font-size:0.8em;
-	font-style: italic;
-}
+
 .books-shortlist {
 	img {
 		transition: transform 0.3s ease-in-out;
@@ -289,70 +262,5 @@ nav.navbar{
 #related-authors {
 	.widget.box-shadow {
 		display:inline-block;
-	}
-}
-blockquote {
-	border-left: none;
-	margin:50px;
-
-	@extend .box-shadow;
-	padding:10px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-
-	@include media-breakpoint-down(sm) {
-		margin:20px;
-	}
-		&::before, &::after {
-		display: block;
-		position: relative;
-		margin-top: -0.1875em;
-		font-family: "Benton Sans Reg";
-		font-size: 5em;
-		line-height: 0;
-		color: #ab162b;
-	}
-
-	&::before {
-		content: url('/wp-content/themes/awesome-book-awards/img/quoteopen.png');
-		float: left;
-		top: 0;
-	}
-
-	&::after {
-		content: url('/wp-content/themes/awesome-book-awards/img/quoteclose.png');
-		float: right;
-		bottom: 0;
-	}
-
-	p {
-		margin: 0px 2em;
-		font-style: italic;
-		line-height: 1.75;
-	}
-
-	footer {
-		&:before {
-			content: '\2014 \00A0';
-		}
-		margin: 0px 2.5em;
-		background: transparent;
-		display: block;
-		font-size: 80%;
-		text-align:right;
-		line-height: 1.42857143;
-		color: #777;
-		padding-left: 20px;
-	}
-
-	&.blockquote-reverse { border-right: none; }
-}
-.oembed_wrap.Vimeo {
-	iframe {
-		display:block;
-		margin:auto;
-		@extend .box-shadow;
-		@extend .widget;
 	}
 }

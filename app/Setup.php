@@ -24,15 +24,17 @@ class Setup {
 		add_image_size( 'landscape', 325, 225, true);
 		add_action('after_setup_theme', array(self::class, 'understrap_setup'));
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
+		add_action('admin_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 		add_action('wp_head', array(self::class, 'googleanalytics'));
 		add_action('init', array(self::class, 'ryanbenhase_unregister_taxes'));
 		add_filter('oembed_dataparse', array(self::class,'oembed_video_add_wrapper'),10,3);
+		//add_editor_style("css/editor-style.css");
 
 	}
 	static public function oembed_video_add_wrapper($return, $data, $url) {
 		return '<div class="oembed_wrap '.$data->provider_name.'">'.$return.'</div>';
 	}
-	
+
 	static public function modify_read_more_link() {
 		$style = "signpost";
 		return '<a class="'.$style.'" href="'.get_permalink().'">Read More <i class="fa fa-fw fa-chevron-right"></i></a>';
@@ -67,6 +69,7 @@ class Setup {
 	static public function MetaBoxes() {
 		new MetaBoxes();
 	}
+
 	public function enqueue_scripts() {
 		wp_enqueue_style('aspect-font', '//cdn.cranleigh.org/css/AspW-Rg.css');
 		wp_enqueue_style('bentonsans', '//cdn.cranleigh.org/fonts/bentonsans/fontface.css');
