@@ -348,3 +348,11 @@ blockquote {
 
 	&.blockquote-reverse { border-right: none; }
 }
+.oembed_wrap.Vimeo {
+	iframe {
+		display:block;
+		margin:auto;
+		@extend .box-shadow;
+		@extend .widget;
+	}
+}

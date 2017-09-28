@@ -26,9 +26,13 @@ class Setup {
 		add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
 		add_action('wp_head', array(self::class, 'googleanalytics'));
 		add_action('init', array(self::class, 'ryanbenhase_unregister_taxes'));
+		add_filter('oembed_dataparse', array(self::class,'oembed_video_add_wrapper'),10,3);
 
 	}
-
+	static public function oembed_video_add_wrapper($return, $data, $url) {
+		return '<div class="oembed_wrap '.$data->provider_name.'">'.$return.'</div>';
+	}
+	
 	static public function modify_read_more_link() {
 		$style = "signpost";
 		return '<a class="'.$style.'" href="'.get_permalink().'">Read More <i class="fa fa-fw fa-chevron-right"></i></a>';

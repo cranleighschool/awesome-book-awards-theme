@@ -9255,7 +9255,7 @@ nav.navbar {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-.box-shadow, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, blockquote {
+.box-shadow, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, blockquote, .oembed_wrap.Vimeo iframe {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9288,16 +9288,16 @@ nav.navbar {
       margin: 20px 10px;
       max-width: 100%; } }
 
-.widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
+.widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image, .oembed_wrap.Vimeo iframe {
   padding: 10px;
   margin-bottom: 20px; }
-  .widget.no-padding, .no-padding.signpost, .no-padding.book-cover-wrapper, .no-padding.author-mugshot-wrapper, .no-padding.featured-image {
+  .widget.no-padding, .no-padding.signpost, .no-padding.book-cover-wrapper, .no-padding.author-mugshot-wrapper, .no-padding.featured-image, .oembed_wrap.Vimeo iframe.no-padding {
     padding: 0px; }
   @media (max-width: 991px) {
-    .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
+    .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image, .oembed_wrap.Vimeo iframe {
       padding: 7.5px; } }
   @media (max-width: 767px) {
-    .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image {
+    .widget, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .featured-image, .oembed_wrap.Vimeo iframe {
       padding: 5px; } }
 
 @media (min-width: 576px) {
@@ -9372,7 +9372,7 @@ nav.navbar {
   .btn-peagreen:hover {
     color: #fff; }
 
-#related-authors .widget.box-shadow, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image {
+#related-authors .widget.box-shadow, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe {
   display: inline-block; }
 
 blockquote {
@@ -9418,6 +9418,10 @@ blockquote {
       content: '\2014 \00A0'; }
   blockquote.blockquote-reverse {
     border-right: none; }
+
+.oembed_wrap.Vimeo iframe {
+  display: block;
+  margin: auto; }
 
 /*
 * Use existing Bootstrap 4 classes and
