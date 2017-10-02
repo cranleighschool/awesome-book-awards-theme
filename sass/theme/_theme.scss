@@ -243,6 +243,15 @@ nav.navbar{
 	margin-bottom:20px;
 
 }
+.btn-register-interest {
+	@include button-variant(#249d3d, lighten(#249d3d, 20%), darken(#249d3d, 10%));
+	@extend .box-shadow;
+	padding:20px;
+	text-decoration: none;
+	font-family: "AspW-Rg";
+	text-transform: uppercase;
+
+}
 .btn-peagreen {
 	@include button-variant(#78be20, darken(#78be20, 20%), darken(#78be20, 10%));
 	color:#fff;

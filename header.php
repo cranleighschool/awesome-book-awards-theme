@@ -43,6 +43,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				echo '<img src="'.$image[0].'" class="img-fluid" />';
 				echo '</a>'; ?>
 					</div>
+					<div class="col-md-6 text-center">
+						<a href="/register/" class="btn btn-register-interest">Register Your Interest</a>
+					</div>
 				</div>
 			</div>
 		</div>
