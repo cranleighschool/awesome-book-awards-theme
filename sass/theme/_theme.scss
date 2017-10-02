@@ -295,7 +295,17 @@ nav.navbar{
 		display:inline-block;
 	}
 }
-
+h2.entry-title {
+	a {
+		text-decoration: none;
+	}
+}
+.post-featured-image {
+	img {
+		display: block;
+		margin:auto;
+	}
+}
 nav.shift ul li a,
 nav.shift ul li a:after,
 nav.shift ul li a:before {

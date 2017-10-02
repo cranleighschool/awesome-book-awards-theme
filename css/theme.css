@@ -9491,6 +9491,13 @@ nav.navbar {
 #related-authors .widget.box-shadow, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors .widget.btn-register-interest, #related-authors .btn-register-interest.signpost, #related-authors .signpost.gform_button.button, #related-authors .btn-register-interest.book-cover-wrapper, #related-authors .book-cover-wrapper.gform_button.button, #related-authors .btn-register-interest.author-mugshot-wrapper, #related-authors .author-mugshot-wrapper.gform_button.button, #related-authors .btn-register-interest.featured-image, #related-authors .featured-image.gform_button.button, #related-authors .widget.gform_button.button {
   display: inline-block; }
 
+h2.entry-title a {
+  text-decoration: none; }
+
+.post-featured-image img {
+  display: block;
+  margin: auto; }
+
 nav.shift ul li a,
 nav.shift ul li a:after,
 nav.shift ul li a:before {
