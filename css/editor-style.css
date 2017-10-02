@@ -9134,7 +9134,7 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
-.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest {
+.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest, .gform_button.button {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9346,7 +9346,7 @@ nav.navbar {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest {
+.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest, .gform_button.button {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9425,7 +9425,7 @@ nav.navbar {
     -o-transform: scale(1.1);
     transform: scale(1.1); }
 
-.btn-register-interest {
+.btn-register-interest, .gform_button.button {
   color: #fff;
   background-color: #249d3d;
   border-color: #50d76c;
@@ -9433,17 +9433,18 @@ nav.navbar {
   text-decoration: none;
   font-family: "AspW-Rg";
   text-transform: uppercase; }
-  .btn-register-interest:hover {
+  .btn-register-interest:hover, .gform_button.button:hover {
     color: #fff;
     background-color: #1a742d;
     border-color: #2ec64d; }
-  .btn-register-interest:focus, .btn-register-interest.focus {
+  .btn-register-interest:focus, .gform_button.button:focus, .btn-register-interest.focus, .focus.gform_button.button {
     box-shadow: 0 0 0 3px rgba(80, 215, 108, 0.5); }
-  .btn-register-interest.disabled, .btn-register-interest:disabled {
+  .btn-register-interest.disabled, .disabled.gform_button.button, .btn-register-interest:disabled, .gform_button.button:disabled {
     background-color: #249d3d;
     border-color: #50d76c; }
-  .btn-register-interest:active, .btn-register-interest.active,
-  .show > .btn-register-interest.dropdown-toggle {
+  .btn-register-interest:active, .gform_button.button:active, .btn-register-interest.active, .active.gform_button.button,
+  .show > .btn-register-interest.dropdown-toggle,
+  .show > .dropdown-toggle.gform_button.button {
     background-color: #1a742d;
     background-image: none;
     border-color: #2ec64d; }
@@ -9479,7 +9480,7 @@ nav.navbar {
   .btn-peagreen:hover {
     color: #fff; }
 
-#related-authors .widget.box-shadow, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors .widget.btn-register-interest, #related-authors .btn-register-interest.signpost, #related-authors .btn-register-interest.book-cover-wrapper, #related-authors .btn-register-interest.author-mugshot-wrapper, #related-authors .btn-register-interest.featured-image {
+#related-authors .widget.box-shadow, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors .widget.btn-register-interest, #related-authors .btn-register-interest.signpost, #related-authors .signpost.gform_button.button, #related-authors .btn-register-interest.book-cover-wrapper, #related-authors .book-cover-wrapper.gform_button.button, #related-authors .btn-register-interest.author-mugshot-wrapper, #related-authors .author-mugshot-wrapper.gform_button.button, #related-authors .btn-register-interest.featured-image, #related-authors .featured-image.gform_button.button, #related-authors .widget.gform_button.button {
   display: inline-block; }
 
 /*

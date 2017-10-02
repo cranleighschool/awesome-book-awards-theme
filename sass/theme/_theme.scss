@@ -252,6 +252,9 @@ nav.navbar{
 	text-transform: uppercase;
 
 }
+.gform_button.button {
+	@extend .btn-register-interest;
+}
 .btn-peagreen {
 	@include button-variant(#78be20, darken(#78be20, 20%), darken(#78be20, 10%));
 	color:#fff;
