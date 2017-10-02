@@ -263,7 +263,7 @@ nav.navbar{
 .btn-register-interest {
 	@include button-variant(#249d3d, lighten(#249d3d, 20%), darken(#249d3d, 10%));
 	@extend .box-shadow;
-	padding:20px;
+	padding:10px 20px;
 	text-decoration: none;
 	font-family: "AspW-Rg";
 	text-transform: uppercase;
