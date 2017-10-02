@@ -9311,7 +9311,9 @@ nav.navbar {
   background: #8CB7E8; }
   nav.navbar a {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: "AspW-Rg";
+    text-transform: uppercase; }
 
 .navbar-toggler {
   color: #fff; }
