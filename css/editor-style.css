@@ -9313,7 +9313,13 @@ nav.navbar {
     color: #fff;
     text-decoration: none;
     font-family: "AspW-Rg";
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 0px 2.5px; }
+  nav.navbar li.active a {
+    background: #FFC627;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
 
 .navbar-toggler {
   color: #fff; }
@@ -9484,6 +9490,45 @@ nav.navbar {
 
 #related-authors .widget.box-shadow, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors .widget.btn-register-interest, #related-authors .btn-register-interest.signpost, #related-authors .signpost.gform_button.button, #related-authors .btn-register-interest.book-cover-wrapper, #related-authors .book-cover-wrapper.gform_button.button, #related-authors .btn-register-interest.author-mugshot-wrapper, #related-authors .author-mugshot-wrapper.gform_button.button, #related-authors .btn-register-interest.featured-image, #related-authors .featured-image.gform_button.button, #related-authors .widget.gform_button.button {
   display: inline-block; }
+
+nav.shift ul li a,
+nav.shift ul li a:after,
+nav.shift ul li a:before {
+  transition: all 0.5s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+/* SHIFT */
+nav.shift ul li a {
+  position: relative;
+  z-index: 1; }
+
+nav.shift ul li a:hover {
+  color: #fff; }
+
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 1px;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #FFC627;
+  visibility: none;
+  opacity: 0;
+  z-index: -1; }
+
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  width: 100%; }
 
 /*
 * Use existing Bootstrap 4 classes and

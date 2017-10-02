@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 		</div>
 
-		<nav class="navbar navbar-expand-md">
+		<nav class="navbar navbar-expand-md shift">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
