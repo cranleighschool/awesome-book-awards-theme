@@ -16,7 +16,7 @@ class FAQ extends BaseType {
 	public function setup() {
 
 		$this->setIcon('dashicons-carrot');
-		$this->setOptions(["supports"=>["title", "editor"], "has_archive" => false]);
+		$this->setOptions(["supports"=>["page-attributes", "title", "editor"], "has_archive" => false]);
 		$this->setLabels(['new_item' => 'FAQ', 'add_new_item' => 'Add a New Frequently Asked Question', 'name' => 'FAQs', 'menu_name' => 'FAQs', 'all_items' => 'FAQs']);
 	}
 
