@@ -25,6 +25,8 @@ class FAQs extends BaseShortcode {
 		$args = [
 			"post_type" => FAQ::getPostTypeKey(),
 			"posts_per_page" => -1,
+			"orderby" => "menu_order",
+			"order" => "ASC"
 		];
 
 		$this->query = new WP_Query($args);
