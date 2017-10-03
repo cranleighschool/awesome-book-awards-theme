@@ -15,7 +15,7 @@ class School extends BaseType {
 
 	public function setup() {
 		$this->setIcon('dashicons-building');
-		$this->setOptions(['supports'=>['title', 'thumbnail']]);
+		$this->setOptions(['supports'=>['title', 'thumbnail'], "has_archive" => false]);
 		$this->setLabels(['featured_image' => "School Logo"]);
 	}
 
