@@ -9172,6 +9172,8 @@ body {
       color: #8CB7E8; }
   body p {
     margin-bottom: 2rem; }
+  body .entry-content li, body article li {
+    margin-bottom: 1.5rem; }
   body strong {
     font-family: "Benton Sans Reg";
     font-weight: normal; }
