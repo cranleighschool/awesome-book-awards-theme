@@ -20,7 +20,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	if ( 'right' === $sidebar_pos || 'left' === $sidebar_pos ) {
 		$html = '<div class="';
 		if ( is_active_sidebar( 'right-sidebar' ) || is_active_sidebar( 'left-sidebar' ) ) {
-			$html .= 'col-md-8 content-area" id="primary">';
+			$html .= 'col-lg-8 content-area" id="primary">';
 		} else {
 			$html .= 'col-md-12 content-area" id="primary">';
 		}
