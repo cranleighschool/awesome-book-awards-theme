@@ -9165,6 +9165,12 @@ body {
   body h1, body h2, body h3, body h4, body h5 {
     font-family: "AspW-Rg";
     text-transform: uppercase; }
+  body h1, body .h1 {
+    font-size: 2rem; }
+  body h2, body .h2 {
+    font-size: 1.75rem; }
+  body h3, body .h3 {
+    font-size: 1.25rem; }
   body a {
     color: #0C223F;
     text-decoration: underline; }
