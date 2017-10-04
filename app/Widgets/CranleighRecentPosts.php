@@ -7,6 +7,7 @@
  */
 namespace CranleighSchool\AwesomeBookAwardsTheme\Widgets;
 
+use CranleighSchool\AwesomeBookAwardsTheme\Setup;
 use WP_Widget;
 use WP_Query;
 
@@ -70,6 +71,9 @@ class CranleighRecentPosts extends WP_Widget {
 		echo '<div class="recent-posts">';
 		echo '<ul class="list-unstyled post-list">';
 		while($query->have_posts()): $query->the_post();
+
+			if (get_permalink() == Setup::currentUrl(true))
+				continue;
 			?>
 			<li>
 				<div class="row">

@@ -32,6 +32,16 @@ class Setup {
 		//add_editor_style("css/editor-style.css");
 
 	}
+	static public function currentUrl($add_trailing_slash=false) {
+		global $wp;
+		$url = home_url(add_query_arg(array(),$wp->request));
+
+		if ($add_trailing_slash==true) {
+			return $url."/";
+		} else {
+			return $url;
+		}
+	}
 	static public function Widgets() {
 		add_action('widgets_init', function() {
 			register_widget(CranleighRecentPosts::class);
