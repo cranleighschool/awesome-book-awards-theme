@@ -15,6 +15,7 @@ use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\FAQ;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\School;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
 use CranleighSchool\AwesomeBookAwardsTheme\Widgets\CranleighRecentPosts;
+use CranleighSchool\AwesomeBookAwardsTheme\Widgets\RelatedPosts;
 
 class Setup {
 
@@ -45,6 +46,7 @@ class Setup {
 	static public function Widgets() {
 		add_action('widgets_init', function() {
 			register_widget(CranleighRecentPosts::class);
+			register_widget(RelatedPosts::class);
 		});
 	}
 	static public function oembed_video_add_wrapper($return, $data, $url) {

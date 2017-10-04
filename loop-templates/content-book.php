@@ -58,7 +58,7 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 
 
 					<?php echo $author->image; ?>
-					<h2>About The Author</h2>
+					<h2 class="sr-only">About The Author</h2>
 					<h3><?php echo $author->post_title; ?></h3>
 					<?php echo wpautop( \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author::wp_first_paragraph_excerpt($author->ID) ); ?>
 					<div class="clear clearfix">&nbsp;</div>

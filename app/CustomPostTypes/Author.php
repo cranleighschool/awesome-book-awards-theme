@@ -156,7 +156,7 @@ class Author extends BaseType {
 
 		return '<a class="'.$style.'" href="'.get_permalink($author).'">'.$text.' <i class="fa fa-fw fa-chevron-right"></i></a>';
 	}
-	public static function getNews($author_id=null) {
+	public static function getNews($title="Related News", $author_id=null) {
 		if ($author_id===null) {
 			$author_id = get_the_ID();
 		}
@@ -172,10 +172,13 @@ class Author extends BaseType {
 				]
 			]
 		];
+		if ($title==="args") {
+			return $args;
+		}
 		$query = new WP_Query($args);
 		if ($query->have_posts()):
 			echo '<div class="widget box-shadow">';
-			echo "<h3>Latest News</h3>";
+			echo "<h3>".$title."</h3>";
 			echo "<ul>";
 			while($query->have_posts()): $query->the_post();
 				echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';

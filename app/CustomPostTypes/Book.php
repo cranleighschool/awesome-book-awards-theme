@@ -8,6 +8,7 @@
 
 namespace CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes;
 
+use CranleighSchool\AwesomeBookAwardsTheme\Widgets\RelatedPosts;
 use WP_Query;
 
 class Book extends BaseType {
@@ -52,11 +53,13 @@ class Book extends BaseType {
 
 	}
 
-	public static function getNews($book_id=null) {
+	public static function getNews($title="Latest News", $book_id=null) {
 		if ($book_id===null) {
 			$book_id = get_the_ID();
 		}
+
 		global $post;
+
 		$args = [
 			"post_type" => 'post',
 			"posts_per_page" => -1,
@@ -68,11 +71,14 @@ class Book extends BaseType {
 				]
 			]
 		];
+		if ($title==="args") {
+			return $args;
+		}
 
 		$query = new WP_Query($args);
 		if ($query->have_posts()):
 			echo '<div class="widget box-shadow">';
-			echo "<h3>Latest News</h3>";
+			echo "<h3>".$title."</h3>";
 			echo "<ul>";
 			while($query->have_posts()): $query->the_post();
 				echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
