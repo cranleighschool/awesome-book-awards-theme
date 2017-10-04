@@ -40,20 +40,23 @@ body {
 			color: $light-blue;
 		}
 	}
-	p {
-		margin-bottom: 2rem;
-	}
+
 	.entry-content,article {
 		li {
 			margin-bottom: 1.5rem;
 		}
+		p {
+			margin-bottom: 2rem;
+		}
 	}
+
 
 	strong {
 		font-family: "Benton Sans Reg";
 		font-weight: normal;
 	}
 }
+
 .editorial {
 	text-align: right;
 	padding-top:5px;

@@ -14,6 +14,7 @@ use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\FAQ;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\School;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
+use CranleighSchool\AwesomeBookAwardsTheme\Widgets\CranleighRecentPosts;
 
 class Setup {
 
@@ -30,6 +31,11 @@ class Setup {
 		add_filter('oembed_dataparse', array(self::class,'oembed_video_add_wrapper'),10,3);
 		//add_editor_style("css/editor-style.css");
 
+	}
+	static public function Widgets() {
+		add_action('widgets_init', function() {
+			register_widget(CranleighRecentPosts::class);
+		});
 	}
 	static public function oembed_video_add_wrapper($return, $data, $url) {
 		return '<div class="oembed_wrap '.$data->provider_name.'">'.$return.'</div>';

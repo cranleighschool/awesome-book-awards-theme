@@ -42,6 +42,18 @@ article.archive-article {
 		padding:0px;
 	}
 }
+aside.widget {
+	@extend .box-shadow;
+
+	&.recentposts {
+		p {
+			margin-bottom: 0px;
+		}
+		li {
+			margin-bottom:5px;
+		}
+	}
+}
 @include media-breakpoint-down(md) {
 	h3 {
 		font-size:1.2em;

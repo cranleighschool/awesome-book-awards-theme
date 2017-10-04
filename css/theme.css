@@ -9134,7 +9134,7 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
-.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest, .gform_button.button {
+.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, aside.widget, aside.signpost, aside.book-cover-wrapper, aside.author-mugshot-wrapper, aside.featured-image, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest, .gform_button.button {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9170,10 +9170,10 @@ body {
     text-decoration: underline; }
     body a:hover {
       color: #8CB7E8; }
-  body p {
-    margin-bottom: 2rem; }
   body .entry-content li, body article li {
     margin-bottom: 1.5rem; }
+  body .entry-content p, body article p {
+    margin-bottom: 2rem; }
   body strong {
     font-family: "Benton Sans Reg";
     font-weight: normal; }
@@ -9274,6 +9274,12 @@ article.archive-article {
   article.archive-article .entry-content {
     padding: 0px; }
 
+aside.widget.recentposts p, aside.recentposts.signpost p, aside.recentposts.book-cover-wrapper p, aside.recentposts.author-mugshot-wrapper p, aside.recentposts.featured-image p {
+  margin-bottom: 0px; }
+
+aside.widget.recentposts li, aside.recentposts.signpost li, aside.recentposts.book-cover-wrapper li, aside.recentposts.author-mugshot-wrapper li, aside.recentposts.featured-image li {
+  margin-bottom: 5px; }
+
 @media (max-width: 991px) {
   h3 {
     font-size: 1.2em; }
@@ -9356,7 +9362,7 @@ nav.navbar {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest, .gform_button.button {
+.box-shadow, blockquote, .oembed_wrap.Vimeo iframe, article.archive-article, aside.widget, aside.signpost, aside.book-cover-wrapper, aside.author-mugshot-wrapper, aside.featured-image, .signpost, .book-cover-wrapper, .author-mugshot-wrapper, .entry-content, .featured-image, .btn-register-interest, .gform_button.button {
   box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
@@ -9490,7 +9496,7 @@ nav.navbar {
   .btn-peagreen:hover {
     color: #fff; }
 
-#related-authors .widget.box-shadow, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors .widget.btn-register-interest, #related-authors .btn-register-interest.signpost, #related-authors .signpost.gform_button.button, #related-authors .btn-register-interest.book-cover-wrapper, #related-authors .book-cover-wrapper.gform_button.button, #related-authors .btn-register-interest.author-mugshot-wrapper, #related-authors .author-mugshot-wrapper.gform_button.button, #related-authors .btn-register-interest.featured-image, #related-authors .featured-image.gform_button.button, #related-authors .widget.gform_button.button {
+#related-authors .widget.box-shadow, #related-authors blockquote.widget, #related-authors blockquote.signpost, #related-authors blockquote.book-cover-wrapper, #related-authors blockquote.author-mugshot-wrapper, #related-authors blockquote.featured-image, #related-authors .oembed_wrap.Vimeo iframe, .oembed_wrap.Vimeo #related-authors iframe, #related-authors article.widget.archive-article, #related-authors article.archive-article.signpost, #related-authors article.archive-article.book-cover-wrapper, #related-authors article.archive-article.author-mugshot-wrapper, #related-authors article.archive-article.featured-image, #related-authors aside.widget, #related-authors aside.signpost, #related-authors aside.book-cover-wrapper, #related-authors aside.author-mugshot-wrapper, #related-authors aside.featured-image, #related-authors .signpost, #related-authors .book-cover-wrapper, #related-authors .author-mugshot-wrapper, #related-authors .widget.entry-content, #related-authors .entry-content.signpost, #related-authors .entry-content.book-cover-wrapper, #related-authors .entry-content.author-mugshot-wrapper, #related-authors .entry-content.featured-image, #related-authors .featured-image, #related-authors .widget.btn-register-interest, #related-authors .btn-register-interest.signpost, #related-authors .signpost.gform_button.button, #related-authors .btn-register-interest.book-cover-wrapper, #related-authors .book-cover-wrapper.gform_button.button, #related-authors .btn-register-interest.author-mugshot-wrapper, #related-authors .author-mugshot-wrapper.gform_button.button, #related-authors .btn-register-interest.featured-image, #related-authors .featured-image.gform_button.button, #related-authors .widget.gform_button.button {
   display: inline-block; }
 
 h2.entry-title a {
