@@ -77,7 +77,7 @@ class CranleighRecentPosts extends WP_Widget {
 			?>
 			<li>
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-4">
 						<a href="<?php echo get_permalink(); ?>">
 							<?php
 							if (has_post_thumbnail()) {
@@ -89,7 +89,7 @@ class CranleighRecentPosts extends WP_Widget {
 							?>
 						</a>
 					</div>
-					<div class="col-md-8">
+					<div class="col-8">
 						<p>
 							<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
 						</p>
