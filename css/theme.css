@@ -9281,6 +9281,8 @@ aside.widget.recentposts li, aside.recentposts.signpost li, aside.recentposts.bo
   margin-bottom: 5px; }
 
 @media (max-width: 991px) {
+  h4 {
+    font-size: 1.1em; }
   h3 {
     font-size: 1.2em; }
   h2 {
