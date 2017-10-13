@@ -88,12 +88,12 @@ class Setup {
 		new MetaBoxes();
 	}
 
-	public function enqueue_scripts() {
+	public static function enqueue_scripts() {
 		wp_enqueue_style('aspect-font', '//cdn.cranleigh.org/css/AspW-Rg.css');
 		wp_enqueue_style('bentonsans', '//cdn.cranleigh.org/fonts/bentonsans/fontface.css');
 
 	}
-	public function googleanalytics() {
+	public static function googleanalytics() {
 	//	if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in())
 	//		return false;
 		?>
@@ -109,7 +109,7 @@ class Setup {
 </script>
 <?php
 	}
-	public function understrap_setup() {
+	public static function understrap_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
