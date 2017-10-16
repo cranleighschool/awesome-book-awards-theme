@@ -48,7 +48,8 @@ aside.widget {
 	&.recentposts {
 		p {
 			margin-bottom: 0px;
-			small{
+			.recentpost-excerpt {
+				font-size:smaller;
 				line-height: 0.9em;
 			}
 		}

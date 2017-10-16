@@ -93,7 +93,7 @@ class CranleighRecentPosts extends WP_Widget {
 						<p>
 							<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
 						</p>
-						<p><small><?php echo $this->getExcerpt(get_the_content(), 70); ?></small></p>
+						<p class="recentpost-excerpt"><?php echo $this->getExcerpt(get_the_content(), 70); ?></p>
 					</div>
 				</div>
 			</li>
