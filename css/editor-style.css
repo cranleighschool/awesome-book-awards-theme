@@ -9281,7 +9281,8 @@ article.archive-article {
     padding: 0px; }
 
 aside.widget.recentposts p, aside.recentposts.signpost p, aside.recentposts.book-cover-wrapper p, aside.recentposts.author-mugshot-wrapper p, aside.recentposts.featured-image p {
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  line-height: 0.9em; }
 
 aside.widget.recentposts li, aside.recentposts.signpost li, aside.recentposts.book-cover-wrapper li, aside.recentposts.author-mugshot-wrapper li, aside.recentposts.featured-image li {
   margin-bottom: 5px; }
