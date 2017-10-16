@@ -94,8 +94,9 @@ class Setup {
 
 	}
 	public static function googleanalytics() {
-	//	if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in())
-	//		return false;
+		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in())
+			echo '<!-- Analytics Aborted because you\'re either logged in, or you are on HTTP HOST -->';
+			return false;
 		?>
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-42791789-4"></script>
