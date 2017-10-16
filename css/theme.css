@@ -9284,7 +9284,7 @@ aside.widget.recentposts p, aside.recentposts.signpost p, aside.recentposts.book
   margin-bottom: 0px; }
   aside.widget.recentposts p.recentpost-excerpt, aside.recentposts.signpost p.recentpost-excerpt, aside.recentposts.book-cover-wrapper p.recentpost-excerpt, aside.recentposts.author-mugshot-wrapper p.recentpost-excerpt, aside.recentposts.featured-image p.recentpost-excerpt {
     font-size: smaller;
-    line-height: 0.9em; }
+    line-height: 1em; }
 
 aside.widget.recentposts li, aside.recentposts.signpost li, aside.recentposts.book-cover-wrapper li, aside.recentposts.author-mugshot-wrapper li, aside.recentposts.featured-image li {
   margin-bottom: 5px; }
