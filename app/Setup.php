@@ -19,7 +19,6 @@ use CranleighSchool\AwesomeBookAwardsTheme\Widgets\RelatedPosts;
 
 class Setup {
 
-
 	static public function run() {
 		add_image_size( 'book-cover', 734, 1124, true );
 		add_image_size( 'author-mugshot', 200, 300, true);
@@ -33,6 +32,7 @@ class Setup {
 		//add_editor_style("css/editor-style.css");
 
 	}
+
 	static public function currentUrl($add_trailing_slash=false) {
 		global $wp;
 		$url = home_url(add_query_arg(array(),$wp->request));
@@ -43,12 +43,14 @@ class Setup {
 			return $url;
 		}
 	}
+
 	static public function Widgets() {
 		add_action('widgets_init', function() {
 			register_widget(CranleighRecentPosts::class);
 			register_widget(RelatedPosts::class);
 		});
 	}
+
 	static public function oembed_video_add_wrapper($return, $data, $url) {
 		return '<div class="oembed_wrap '.$data->provider_name.'">'.$return.'</div>';
 	}
@@ -70,20 +72,22 @@ class Setup {
 		$school->init();
 		$faq->init();
 		$partner->init();
-
-
 	}
+
 	static public function ryanbenhase_unregister_taxes() {
 		unregister_taxonomy_for_object_type( 'post_tag', 'post' );
 		unregister_taxonomy_for_object_type( 'category', 'post' );
 	}
+
 	static public function ThemeUpdateChecker() {
 		new ThemeUpdateChecker();
 	}
+
 	static public function Shortcodes() {
 		new Shortcodes\BookList();
 		new Shortcodes\FAQs();
 	}
+
 	static public function MetaBoxes() {
 		new MetaBoxes();
 	}
@@ -93,10 +97,12 @@ class Setup {
 		wp_enqueue_style('bentonsans', '//cdn.cranleigh.org/fonts/bentonsans/fontface.css');
 
 	}
+
 	public static function googleanalytics() {
-		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in())
+		if ($_SERVER['HTTP_HOST']=='frbdev.cranleigh.org' || is_user_logged_in()) {
 			echo '<!-- Analytics Aborted because you\'re either logged in, or you are on HTTP HOST -->';
 			return false;
+		}
 		?>
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-42791789-4"></script>
