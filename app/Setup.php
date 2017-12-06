@@ -31,6 +31,8 @@ class Setup {
 		add_filter('oembed_dataparse', array(self::class,'oembed_video_add_wrapper'),10,3);
 		//add_editor_style("css/editor-style.css");
 
+		$fix_attachementPages = new HideAttachmentPages();
+
 	}
 
 	static public function currentUrl($add_trailing_slash=false) {
