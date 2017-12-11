@@ -52,7 +52,34 @@ class Book extends BaseType {
 		$this->post_type->taxonomy('awesome-year');
 
 	}
+	public static function getReviews($title="Reviews", $book_id=null) {
+		if ($book_id===null) {
+			$book_id = get_the_ID();
+		}
+		global $post;
 
+		$args = [
+			"post_type" => Review::getPostTypeKey(),
+			"posts_per_page" => -1,
+			"meta_query" => [
+				[
+					"key" => "related_books",
+					"value" => $book_id,
+					"compare" => "LIKE"
+				]
+			]
+		];
+		$query = new WP_Query($args);
+		if ($query->have_posts()):
+			echo '<div class="widget box-shadow">';
+			echo '<h3>'.$title.'</h3>';
+			while($query->have_posts()): $query->the_post();
+
+			echo get_the_title();
+			endwhile;
+			echo '</div>';
+		endif;
+	}
 	public static function getNews($title="Latest News", $book_id=null) {
 		if ($book_id===null) {
 			$book_id = get_the_ID();

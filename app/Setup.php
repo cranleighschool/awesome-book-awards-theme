@@ -12,6 +12,7 @@ namespace CranleighSchool\AwesomeBookAwardsTheme;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\FAQ;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Review;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\School;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
 use CranleighSchool\AwesomeBookAwardsTheme\Widgets\CranleighRecentPosts;
@@ -68,12 +69,14 @@ class Setup {
 		$school = new School();
 		$faq = new FAQ();
 		$partner = new Partner();
+		$review = new Review();
 
 		$book->init();
 		$author->init();
 		$school->init();
 		$faq->init();
 		$partner->init();
+		$review->init();
 	}
 
 	static public function ryanbenhase_unregister_taxes() {

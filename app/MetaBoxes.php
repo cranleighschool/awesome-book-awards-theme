@@ -11,6 +11,7 @@ namespace CranleighSchool\AwesomeBookAwardsTheme;
 
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Author;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
+use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Review;
 
 class MetaBoxes {
 	public function __construct() {
@@ -19,6 +20,7 @@ class MetaBoxes {
 		add_filter( 'rwmb_meta_boxes', array($this, 'sponsors') );
 		add_filter( 'rwmb_meta_boxes', array($this, 'authors_news') );
 		add_filter( 'rwmb_meta_boxes', array($this, 'author_twitter'));
+		add_filter( 'rwmb_meta_boxes', array($this, 'reviews'));
 	}
 
 	public function authors_news( $meta_boxes ) {
@@ -40,7 +42,7 @@ class MetaBoxes {
 
 		$meta_boxes[] = [
 			"title" => __("Related Books", 'cranleigh-2016'),
-			"post_types" => ["post"],
+			"post_types" => ["post", "review"],
 			"priority" => 'high',
 			'context' => 'side',
 			'fields' => [
@@ -68,6 +70,40 @@ class MetaBoxes {
 					"id" => "author_twitter_handle",
 					"name" => "Author Twitter Handle",
 					"type" => "text"
+				]
+			]
+		];
+		return $meta_boxes;
+	}
+
+	public function reviews( $meta_boxes ) {
+		$meta_boxes[] = [
+			"title" => __( "Review Meta", "cranleigh-2016"),
+			"post_types" => Review::getPostTypeKey(),
+			"context" => "side",
+			"priority" => "high",
+			"fields" => [
+				[
+					"id" => "review_author",
+					"name" => "Reviewer Name",
+					"type" => "text"
+				],
+				[
+					"id" => "review_author_age",
+					"name" => "Reviewer Age",
+					"type" => "number"
+				],
+				[
+					"id" => "review_score",
+					"name" => "Score",
+					"type" => "slider",
+					"suffix" => "/5",
+					"js_options" => [
+						"min" => 0,
+						"max" => 5,
+						"step" => 1
+					],
+					"std" => 0
 				]
 			]
 		];
