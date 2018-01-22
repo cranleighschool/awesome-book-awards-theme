@@ -43,8 +43,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				echo '<img src="'.$image[0].'" class="img-fluid" />';
 				echo '</a>'; ?>
 					</div>
-					<div class="col-md-6 text-center">
-						<a href="/register/" class="btn btn-register-interest">Register Your Interest</a>
+					<div class="col-md-6 text-right">
+						<?php if (get_theme_mod('show_cta_button')): ?>
+						<a href="<?php echo get_theme_mod('url_cta_button');?>" class="btn btn-register-interest"><?php echo get_theme_mod('label_cta_button'); ?></a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -65,13 +67,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php if ( is_front_page() && is_home() ) : ?>
 
 							<h1 class="navbar-brand mb-0 sr-only"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-							
+
 						<?php else : ?>
 
 							<a class="navbar-brand sr-only" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						
+
 						<?php endif; ?>
-						
+
 
 
 				<!-- The WordPress Menu goes here -->

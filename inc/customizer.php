@@ -31,6 +31,58 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_theme_customize_register( $wp_customize ) {
+		$wp_customize->add_section('awesome_book_awards_settings', array(
+			'title' => 'Awesome Books Awards',
+			'capability' => 'edit_theme_options',
+			'description' => 'Edit Theme Options',
+			'priority' => 1
+		));
+		$wp_customize->add_setting('show_cta_button', array(
+			'default' => 0,
+			'type' => 'theme_mod'
+		));
+		$wp_customize->add_setting('url_cta_button', array(
+			'type' => 'theme_mod',
+			'default' => null
+		));
+		$wp_customize->add_setting('label_cta_button', array(
+			'type' => 'theme_mod',
+			'default' => null
+		));
+		$wp_customize->add_control(new WP_Customize_Control(
+			$wp_customize,
+			'show_cta_button',
+			array(
+				'label' => __("Show CTA Button", 'cranleigh-2016'),
+				"section" => "awesome_book_awards_settings",
+				"settings" => "show_cta_button",
+				"type" => "radio",
+				"choices" => array(
+					true => "Yes",
+					false => "No"
+				)
+			)
+		));
+		$wp_customize->add_control(new WP_Customize_Control(
+			$wp_customize,
+			'label_cta_button',
+			array(
+				'label' => __("Label for CTA Button", 'cranleigh-2016'),
+				'section' => "awesome_book_awards_settings",
+				"settings" => "label_cta_button",
+				"type" => "text"
+			)
+		));
+		$wp_customize->add_control(new WP_Customize_Control(
+			$wp_customize,
+			'url_cta_button',
+			array(
+				'label' => __("URL for CTA Button", 'cranleigh-2016'),
+				'section' => "awesome_book_awards_settings",
+				"settings" => "url_cta_button",
+				"type" => "url"
+			)
+		));
 
 		// Theme layout settings.
 		$wp_customize->add_section( 'understrap_theme_layout_options', array(
