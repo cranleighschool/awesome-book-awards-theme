@@ -71,11 +71,23 @@ class Book extends BaseType {
 		];
 		$query = new WP_Query($args);
 		if ($query->have_posts()):
-			echo '<div class="widget box-shadow">';
-			echo '<h3>'.$title.'</h3>';
+			echo '<div class="reviews">';
+			echo '<h3 class="sr-only">'.$title.'</h3>';
+			$i = 0;
 			while($query->have_posts()): $query->the_post();
-
-			echo get_the_title();
+			    $i++;
+			    if ($i % 2) {
+			        $class = 'left';
+                }  else {
+			        $class = 'right';
+                }
+			    echo '<div class="'.$class.'">';
+			    echo '<blockquote>';
+    			echo '<h4 style="text-indent:5px">'.get_the_title().'</h4>';
+    			echo wpautop(get_the_content());
+                echo '<footer>'.get_post_meta(get_the_ID(), 'review_author', true).'</footer>';
+                echo '</blockquote>';
+    			echo '</div>';
 			endwhile;
 			echo '</div>';
 		endif;
