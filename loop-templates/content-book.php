@@ -50,7 +50,13 @@ if (get_post_meta(get_the_ID(), 'author', true)) {
 				<?php endif; ?>
 			</div>
 		</div>
-
+		<?php if (!is_wp_error($reviews)): ?>
+		<div class="row ">
+			<div class="col-md-12">
+				<?php \CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Book::getReviews(); ?>
+			</div>
+		</div>
+		<?php endif; ?>
 		<?php if (!is_wp_error($author)): ?>
 		<div class="row ">
 			<div class="col-md-8">
