@@ -29,10 +29,19 @@ class Review extends BaseType {
 
 		$this->setLabels(['featured_image' => "Book Cover"]);
 
-	}
+
+    }
+    public function get_the_archive_title($title) {
+        if( is_post_type_archive( $this->post_type_key ) ) {
+
+            $title = "Reader Reviews";
+
+        }
+
+        return $title;
+    }
 
 	public function render() {
-		//$this->post_type->taxonomy('awesome-year');
 		$this->post_type->columns()->add([
 			'book' => __('Book')
 		]);
@@ -44,5 +53,8 @@ class Review extends BaseType {
 			endforeach;
 			echo implode(", ", $array);
 		});
-	}
+
+        add_filter("get_the_archive_title", array($this, "get_the_archive_title"));
+
+    }
 }
