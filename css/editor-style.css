@@ -9244,6 +9244,10 @@ blockquote {
   blockquote.blockquote-reverse {
     border-right: none; }
 
+.review-content > blockquote {
+  margin: 5px;
+  padding: 5px; }
+
 .oembed_wrap.Vimeo iframe {
   display: block;
   margin: auto; }

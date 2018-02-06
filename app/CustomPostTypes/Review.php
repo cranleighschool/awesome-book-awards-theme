@@ -14,7 +14,19 @@ class Review extends BaseType {
 
 	public function setup() {
 		$this->setIcon('dashicons-building');
-		$this->setOptions(['supports'=>['title', 'thumbnail', 'editor'], "has_archive" => true]);
+
+		$this->setOptions([
+		    'supports'=>[
+		        'title',
+                'thumbnail',
+                'editor'
+            ],
+            "has_archive" => true,
+            "rewrite"  => [
+                "slug" => "reviews"
+            ]
+        ]);
+
 		$this->setLabels(['featured_image' => "Book Cover"]);
 
 	}
