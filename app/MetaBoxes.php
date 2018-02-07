@@ -170,6 +170,12 @@ class MetaBoxes {
 					"name" => __("School Contact", "cranleigh-2016"),
 					"type" => "text",
 					"desc" => "Email Address"
+				],
+				[
+					"id" => "school_contactname",
+					"name" => "Name",
+					"type" => "text",
+					"desc" => "person"
 				]
 			]
 		];
