@@ -91,6 +91,7 @@ class Setup {
 	static public function Shortcodes() {
 		new Shortcodes\BookList();
 		new Shortcodes\FAQs();
+		new Shortcodes\VoteForm();
 	}
 
 	static public function MetaBoxes() {

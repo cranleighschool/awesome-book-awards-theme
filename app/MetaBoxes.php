@@ -176,11 +176,17 @@ class MetaBoxes {
 					"name" => "Name",
 					"type" => "text",
 					"desc" => "person"
+				],
+				[
+					"id" => "vote_submitted",
+					"name" => "Dates Vote Submitted",
+					"type" => "text",
+					"clone" => true
 				]
 			]
 		];
 		$meta[] = [
-			"title" => "Scoring",
+			"title" => "Scoring for ".date('Y'),
 			"post_types" => School::getPostTypeKey(),
 			"context" => "normal",
 			"priority" => "high",
