@@ -131,8 +131,8 @@ class VoteForm extends BaseShortcode {
 			</div>
 			<h3>Your School's Votes</h3>
 			<input type="hidden" name="school_id" value="<?php echo $school->ID; ?>" />
-			<p class="text-danger"><small>Please note, you can only do this once. Please do not complete this form unless all your pupils have read all 5 books. Only children who have read all 5 books are eligible to have their votes count.</small></p>
-			<table style="margin-bottom:10px;">
+            <p class="text-danger"><small>Please note: you can do this once. Only children who have read all 5 books are eligible to have their votes cast. Please complete this form, before voting closes, when your pupils have read all 5 books.</small></p>
+            <table style="margin-bottom:10px;">
 				<thead>
 				<?php foreach ($vBooks as $book):
 
@@ -154,7 +154,7 @@ class VoteForm extends BaseShortcode {
 				</tbody>
 			</table>
 
-			<div class="form-group">
+            <div class="form-group">
 				<button type="button" id="check-calculations" class="btn btn-large btn-warning">Check Calculations</button>
 			</div>
 			<div class="form-group" style="display: none;" id="input-total-children-group">
