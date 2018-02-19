@@ -1,19 +1,7 @@
 <?php
-$num = $_GET['num'];
-$books = new \WP_Query([
-    "posts_per_page" => -1,
-    "post_type" => 'book',
-    "tax_query" => [
-        [
-            "taxonomy" => "awesome-year",
-            "field" => "slug",
-            "terms" => date("Y")
-        ]
-    ]
-]);
-$results = $books->posts;
-wp_reset_query();
-wp_reset_postdata();
+
+ob_start();
+
 ?>
 <html>
 <head>
@@ -44,6 +32,10 @@ wp_reset_postdata();
         font-family: AspW-Rg;
         text-transform: uppercase;
     }
+    .thead {
+        font-family:AspW-Rg;
+        text-transform: uppercase;
+    }
     h1,h2,h3 {
         font-family: AspW-Rg;
         text-transform: uppercase;
@@ -58,16 +50,41 @@ wp_reset_postdata();
 </style>
 </head>
 <body>
-<?php for($i=0; $i < $num; $i++): ?>
+<?php
+if (!isset($_GET['num']) || $_GET['num'] < 1) {
+    echo '<h1>Awesome Book Awards 2018</h1>';
+    echo '<h2>How many voting slips do you need to generate?</h2>';
+    echo '<form>';
+    echo '<input type="number" name="num">';
+    echo '<input type="submit"></form>';
+}
+$num = $_GET['num'];
+
+$books = new \WP_Query([
+    "posts_per_page" => -1,
+    "post_type" => 'book',
+    "orderby" => "ID",
+    "order" => "ASC",
+    "tax_query" => [
+        [
+            "taxonomy" => "awesome-year",
+            "field" => "slug",
+            "terms" => date("Y")
+        ]
+    ]
+]);
+$results = $books->posts;
+wp_reset_query();
+wp_reset_postdata();
+for($i=0; $i < $num; $i++): ?>
     <h1>Awesome Book Awards 2018</h1>
 <p>You must give your favourite book 5 points, your second favourite book 4 points and so on, down to 1 point for your least favourite book.</p>
 <p>You may only vote if you have read all five books.</p>
 <table class="slip">
-    <thead>
-    <th>Book</th>
-    <th>Score</th>
-    </thead>
     <tbody>
+    <tr class="thead">    <td>Book</td>
+        <td>Score</td>
+    </tr>
     <?php foreach ($results as $book): ?>
         <tr>
             <td><?php echo $book->post_title; ?>, <em>by <?php echo get_the_title(get_post_meta($book->ID, 'author', true)); ?></em></td>
@@ -82,3 +99,8 @@ wp_reset_postdata();
 
 </body>
 </html>
+
+<?php
+$html = ob_get_clean();
+
+echo $html;
