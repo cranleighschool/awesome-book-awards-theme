@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b4a4a1505197147a4621e4516abbd988",
     "content-hash": "110b6d235991f6c159859a78472fd971",
     "packages": [
         {
@@ -46,7 +45,7 @@
             ],
             "description": "Simple WordPress custom post types.",
             "homepage": "https://github.com/jjgrainger/posttype",
-            "time": "2017-05-19 12:53:48"
+            "time": "2017-05-19T12:53:48+00:00"
         },
         {
             "name": "yahnis-elsts/admin-notices",
@@ -82,7 +81,7 @@
                 }
             ],
             "description": "A utility library for WordPress plugins that makes it easier to create admin notices. Supports persistently dismissible notices.",
-            "time": "2017-03-20 15:26:49"
+            "time": "2017-03-20T15:26:49+00:00"
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",
@@ -127,7 +126,7 @@
                 "theme updates",
                 "wordpress"
             ],
-            "time": "2017-07-21 11:27:31"
+            "time": "2017-07-21T11:27:31+00:00"
         }
     ],
     "packages-dev": [],
