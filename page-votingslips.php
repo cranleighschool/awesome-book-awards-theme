@@ -20,7 +20,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
-
+<style>
+    .submitter {
+        cursor: pointer;
+    }
+</style>
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -34,7 +38,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'votingslips' ); ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
