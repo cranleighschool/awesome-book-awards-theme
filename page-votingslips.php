@@ -10,6 +10,10 @@
  * @package understrap
  */
 
+if (isset($_GET['num'])) {
+    require_once 'votingslips.php';
+    exit();
+}
 get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
