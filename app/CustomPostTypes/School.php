@@ -83,7 +83,8 @@ class School extends BaseType {
                 echo $return;
             } else {
                 $fav_book = array_keys($scores)[0];
-                $fav_book = get_post($fav_book)->post_title;
+                $fav_book = get_post($fav_book);
+
                 $image = get_the_post_thumbnail($fav_book->ID, 'thumb');
                 echo '<a href="'.get_permalink($fav_book->ID).'">'.$image.'</a>';
             }

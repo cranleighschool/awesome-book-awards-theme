@@ -74,7 +74,7 @@ class VoteForm extends BaseShortcode {
 		$score = get_post_meta($school->ID, "book_id_".$book->ID, true); ?>
 
 			<label class="sr-only" for="book_id_<?php echo $book->ID; ?>"><?php echo $book->post_title; ?></label>
-			<input type="number" required="required" value="<?php echo $score; ?>" name="book_id_<?php echo $book->ID; ?>" class="form-control score-count" style="text-align: center;" />
+			<input type="number" min="1" required="required" value="<?php echo $score; ?>" name="book_id_<?php echo $book->ID; ?>" class="form-control score-count" style="text-align: center;" />
 
 
 		<?php
@@ -191,6 +191,11 @@ class VoteForm extends BaseShortcode {
 					var totalPoints = 0;
 
 					jQuery('.score-count').each(function(){
+					    console.log(parseInt(jQuery(this).val()));
+					    if (parseInt(jQuery(this).val()) < 1) {
+					        console.log("This is too low");
+					        jQuery(this).addClass("has-error");
+                        }
 						totalPoints = totalPoints + parseInt(jQuery(this).val());
 					});
 

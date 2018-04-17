@@ -387,3 +387,8 @@ nav.shift ul li a:hover:after {
 		height: 100%;
 	}
 }
+
+.score-count.has-error {
+	border-color:red !important;
+	border-width:2px !important;
+}
