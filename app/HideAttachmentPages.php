@@ -11,9 +11,9 @@ namespace CranleighSchool\AwesomeBookAwardsTheme;
 
 class HideAttachmentPages {
 	public function __construct() {
-		add_action( 'template_redirect', array(__CLASS__,'redirect_attachment_page'));
-		add_filter('attachment_link', array(__CLASS__, 'cleanup_attachment_link'));
-		add_filter( 'rewrite_rules_array', array(__CLASS__, 'cleanup_default_rewrite_rules' ));
+		add_action( 'template_redirect', array($this,'redirect_attachment_page'));
+		add_filter('attachment_link', array($this, 'cleanup_attachment_link'));
+		add_filter( 'rewrite_rules_array', array($this, 'cleanup_default_rewrite_rules' ));
 
 	}
 

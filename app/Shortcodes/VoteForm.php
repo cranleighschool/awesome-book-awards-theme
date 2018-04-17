@@ -18,12 +18,12 @@ class VoteForm extends BaseShortcode {
 		$this->atts = shortcode_atts([], $atts);
 		$this->pageURI = get_permalink();
 
-		if ($_POST['vote_confirmation']=="on") {
+		if (isset($_POST['vote_confirmation']) && $_POST['vote_confirmation']=="on") {
 			$update = $this->submitScores();
 
 			return "Updated";
 
-		} elseif ($_POST['email']) {
+		} elseif (isset($_POST['email']) && $_POST['email']!= "") {
 			return $this->displayVoteForm();
 		} else {
 			return $this->setUpVoteForm();
