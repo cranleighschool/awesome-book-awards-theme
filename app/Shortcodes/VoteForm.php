@@ -21,7 +21,7 @@ class VoteForm extends BaseShortcode {
 		if (isset($_POST['vote_confirmation']) && $_POST['vote_confirmation']=="on") {
 			$update = $this->submitScores();
 
-			return "Updated";
+			return "<p><strong>Thank you, your votes have been added.</strong></p>";
 
 		} elseif (isset($_POST['email']) && $_POST['email']!= "") {
 			return $this->displayVoteForm();
