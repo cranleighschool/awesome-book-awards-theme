@@ -26,7 +26,7 @@ class DashboardVotingInformation  {
     public function setup_dashboard() {
         wp_add_dashboard_widget(
             'awesome_voting_information', // Widget Slug.
-            'Voting Information', // Title
+            'Voting Information <span style="color:red;">[NEW]</span>', // Title
             array($this, 'widget')
         );
     }
