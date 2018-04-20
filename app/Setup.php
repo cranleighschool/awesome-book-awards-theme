@@ -16,6 +16,7 @@ use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Review;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\School;
 use CranleighSchool\AwesomeBookAwardsTheme\CustomPostTypes\Partner;
 use CranleighSchool\AwesomeBookAwardsTheme\Widgets\CranleighRecentPosts;
+use CranleighSchool\AwesomeBookAwardsTheme\Widgets\DashboardVotingInformation;
 use CranleighSchool\AwesomeBookAwardsTheme\Widgets\RelatedPosts;
 
 class Setup {
@@ -33,6 +34,7 @@ class Setup {
 		//add_editor_style("css/editor-style.css");
 
 		$fix_attachementPages = new HideAttachmentPages();
+		DashboardVotingInformation::run();
 
 	}
 
