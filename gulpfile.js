@@ -219,7 +219,7 @@ gulp.task('scripts', function() {
 
 // Deleting any file inside the /src folder
 gulp.task('clean-source', function () {
-  return del(['src/**/*',]);
+//  return del(['src/**/*',]);
 });
 
 // Run:
