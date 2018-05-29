@@ -1,0 +1,161 @@
+.box-shadow {
+	box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+	-webkit-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.06);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.no-box-shadow {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.widget {
+	padding:10px;
+	margin-bottom: 20px;
+	&.no-padding {
+		padding:0px;
+	}
+	@include media-breakpoint-down(md) {
+		padding:7.5px;
+	}
+	@include media-breakpoint-down(sm) {
+		padding:5px;
+	}
+}
+
+body {
+	font-family:"Benton Sans Lt";
+	font-size:1.1rem;
+
+	h1,h2,h3,h4,h5 {
+		font-family: "AspW-Rg";
+		text-transform: uppercase;
+	}
+	h1,.h1 {
+		font-size:2rem;
+	}
+	h2,.h2 {
+		font-size:1.75rem;
+	}
+	h3,.h3 {
+		font-size:1.25rem;
+	}
+	h4,.h4 {
+
+	}
+	a {
+		color:$dark-blue;
+		text-decoration: underline;
+		&:hover{
+			color: $light-blue;
+		}
+	}
+
+	.entry-content,article {
+		li {
+			margin-bottom: 1.5rem;
+		}
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+
+
+	strong {
+		font-family: "Benton Sans Reg";
+		font-weight: normal;
+	}
+}
+
+.editorial {
+	text-align: right;
+	padding-top:5px;
+	margin-top:5px;
+	border-top: 1px solid #000;
+	font-size:0.8em;
+	font-style: italic;
+}
+blockquote {
+	border-left: none;
+	margin:50px;
+
+	@extend .box-shadow;
+	padding:10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+	@include media-breakpoint-down(sm) {
+		margin:20px;
+	}
+	&::before, &::after {
+		display: block;
+		position: relative;
+		margin-top: -0.1875em;
+		font-family: "Benton Sans Reg";
+		font-size: 5em;
+		line-height: 0;
+		color: #ab162b;
+	}
+
+	&::before {
+		content: url('../img/quoteopen.png');
+		float: left;
+		top: 0;
+	}
+
+	&::after {
+		content: url('../img/quoteclose.png');
+		float: right;
+		bottom: 10px;
+	}
+
+	p {
+		margin: 0px 2em;
+		font-style: italic;
+		line-height: 1.75;
+
+		img {
+			float:right;
+			max-width:100px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			margin:5px;
+
+		}
+	}
+
+	footer {
+		clear:both;
+		&:before {
+			content: '\2014 \00A0';
+		}
+		margin: 0px 2.5em;
+		background: transparent;
+		display: block;
+		font-size: 80%;
+		text-align:right;
+		line-height: 1.42857143;
+		color: #777;
+		padding-left: 20px;
+	}
+
+	&.blockquote-reverse { border-right: none; }
+}
+.review-content {
+	>blockquote {
+		margin:5px;
+		padding:5px;
+	}
+}
+.oembed_wrap.Vimeo {
+	iframe {
+		display:block;
+		margin:auto;
+		@extend .box-shadow;
+		@extend .widget;
+	}
+}

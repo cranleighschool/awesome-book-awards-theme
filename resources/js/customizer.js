@@ -7,14 +7,13 @@
  *
  * @see https://codex.wordpress.org/Theme_Customization_API#Part_3:_Configure_Live_Preview_.28Optional.29
  */
-( function( $ ) {
-
+( function() {
     // Update the site title in real time...
-    wp.customize( 'blogname', function( value ) {
+    window.wp.customize( 'blogname', function( value ) {
         value.bind( function( newval ) {
             console.log(newval);
-            $( '.navbar-header a' ).html( newval );
+            jQuery( '.navbar-header a' ).html( newval );
         } );
     } );
 
-} )( jQuery );
+} )
