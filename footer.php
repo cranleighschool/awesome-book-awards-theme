@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8">
 				<div class="site-info">
 					<?php printf( //WPCS: XSS ok.
-						( 'The Awesome Book Awards are an initiative by %1$s. <br />For more information please contact %2$s.'), '<a href="'.esc_url( 'https://www.cranprep.org/' ).'">Cranleigh Preparatory School</a>', '<a href="mailto:ekkr@cranprep.org">Emma Reid</a>'); ?></div>
+						( 'The Awesome Book Awards are an initiative by %1$s. <br />For more information please contact %2$s.'), '<a href="'.esc_url( 'https://www.cranprep.org/' ).'">Cranleigh Preparatory School</a>', '<a href="mailto:info@awesomebookawards.com">Lucy Collins</a>'); ?></div>
 			</div>
 			
 			<div class="col-md-4">
