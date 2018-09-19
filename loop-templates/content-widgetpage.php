@@ -35,7 +35,10 @@ echo "<ol>";
             <img class="img-thumbnail img-responsive" style="margin:auto;display:inline-block" src="https://promo.cranleigh.org/awesome-book-awards/widgets/images/<?php echo $widget_name.".jpg";?>" />
                 </div>
                 <div class="col-md-8">
+<div class="form-group">
+<label style="margin-bottom:1px;font-size:12px;">Embed Code:</label>
             <textarea class="select-on-click form-control" rows="5" style="width:100%;font-size:10px"><iframe id="awesome-books-widget" border=0 width=100% frameborder=0 src="https://promo.cranleigh.org/awesome-book-awards/widgets/index.php?widget=<?php echo $widget_name; ?>"></iframe><script type="text/javascript">function awesomebookawardswidgetresizer(){jQuery(document).ready(function(){var e=jQuery("#awesome-books-widget"),a=e.width();a>500&&(a=500),e.attr("style","max-width:100%;width:"+a+";height:"+a/2)})}if("undefined"==typeof jQuery){var headTag=document.getElementsByTagName("head")[0],jqTag=document.createElement("script");jqTag.type="text/javascript",jqTag.src="https://code.jquery.com/jquery-3.3.1.min.js",jqTag.onload=awesomebookawardswidgetresizer,headTag.appendChild(jqTag)}else awesomebookawardswidgetresizer();</script></textarea>
+</div>
                 </div>
             </div>
         </li>
