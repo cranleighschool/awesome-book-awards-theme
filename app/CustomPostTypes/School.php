@@ -99,7 +99,7 @@ class School extends BaseType {
                 array(
                     'taxonomy' => 'awesome-year',
                     'field' => 'slug',
-                    'terms' => '2018',
+                    'terms' => get_theme_mod('awesome_year'),
                 )
             )
         ];

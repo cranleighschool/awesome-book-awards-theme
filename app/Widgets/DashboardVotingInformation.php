@@ -11,7 +11,7 @@ namespace CranleighSchool\AwesomeBookAwardsTheme\Widgets;
 use WP_Query;
 class DashboardVotingInformation  {
 
-    public $year = 2018;
+    public $year = 2019;
     private $post_type = "school";
     private $scores = [];
     private $book_ids = [];
@@ -20,7 +20,7 @@ class DashboardVotingInformation  {
     private $still_to_vote = [];
 
     function __construct() {
-
+	$this->year = get_theme_mod('awesome_year');
         add_action('wp_dashboard_setup', array($this, 'setup_dashboard'));
     }
     public function setup_dashboard() {
