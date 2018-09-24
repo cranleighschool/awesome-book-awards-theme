@@ -53,6 +53,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			'type' => 'theme_mod',
 			'defult' => date('Y')
 		));
+		$wp_customize->add_setting('voting_boolean', array(
+			'type' => 'theme_mod',
+			'default' => 0
+		));
 		$wp_customize->add_control(new WP_Customize_Control(
 			$wp_customize,
 			'awesome_year',
@@ -62,6 +66,21 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'type' => 'number',
 			)
 		));
+		$wp_customize->add_control(new WP_Customize_Control(
+                       	$wp_customize,
+                       	'voting_boolean',
+                       	array(
+                               	'label' => __("Voting On/Off", 'cranleigh-2016'),
+                               	"section" => "awesome_book_awards_settings",
+                               	"settings" => "voting_boolean",
+                               	"type" => "radio",
+                               	"choices" => array(
+                                       	true => "On",
+                                       	false => "Off"
+                               	)
+                       	)
+                ));
+
 		$wp_customize->add_control(new WP_Customize_Control(
 			$wp_customize,
 			'show_cta_button',

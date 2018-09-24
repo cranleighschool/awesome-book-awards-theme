@@ -76,13 +76,17 @@ class DashboardVotingInformation  {
     function widget() {
         $this->getScoresFromSchools();
         self::writeFact('The Year is <strong>'.$this->year.'</strong>');
-        self::writeFact("<strong>".$this->calculateNumChildren()."</strong> children have voted this year.");
-        self::writeFact("<strong>".$this->num_completed_scoring."</strong> out of <strong>".$this->num_schools." schools</strong> have voted.");
-        self::writeFact("There are still <strong>".($this->num_schools - $this->num_completed_scoring)." schools</strong> that we want to vote. <em>(These are listed below)</em>");
-        //self::writeFact("There are just <strong>".$this->countdownToCloseVoting()."</strong> left before voting ends!");
-        $this->sortScores(SORT_DESC);
-        $this->displayScoresTable();
-        $this->displayStillToVoteList();
+	if (get_theme_mod('voting_boolean') == false) {
+		self::writeFact('Voting Is Turned <strong>Off</strong>');
+	} else {
+        	self::writeFact("<strong>".$this->calculateNumChildren()."</strong> children have voted this year.");
+        	self::writeFact("<strong>".$this->num_completed_scoring."</strong> out of <strong>".$this->num_schools." schools</strong> have voted.");
+        	self::writeFact("There are still <strong>".($this->num_schools - $this->num_completed_scoring)." schools</strong> that we want to vote. <em>(These are listed below)</em>");
+        	//self::writeFact("There are just <strong>".$this->countdownToCloseVoting()."</strong> left before voting ends!");
+        	$this->sortScores(SORT_DESC);
+        	$this->displayScoresTable();
+        	$this->displayStillToVoteList();
+	}
     }
 
     private function displayStillToVoteList() {
