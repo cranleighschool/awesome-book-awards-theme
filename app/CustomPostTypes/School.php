@@ -29,11 +29,16 @@ class School extends BaseType {
 	public function render() {
 		$this->post_type->taxonomy('awesome-year');
         $this->post_type->columns()->hide('date');
+	$this->post_type->columns()->add([
+            'school_contact' => __('School Contact'),
+]);
+		if (get_theme_mod('voting_boolean') == true) {
         $this->post_type->columns()->add([
             'school_contact' => __('School Contact'),
             'fav_book' => __('This Year\'s Favourite Book'),
             'numkids' => __('# Kids This Year')
         ]);
+	}
 
         $this->post_type->columns()->populate('school_contact', function($column, $post_id) {
             $email = get_post_meta($post_id, 'school_contact', true);
