@@ -99,7 +99,7 @@ class VoteForm extends BaseShortcode {
 		$school = get_post($votingSchoolID);
 		if (is_wp_error($votingSchoolID)) {
 			return "<h2>Error</h2>"
-				."<p class='text-danger'>We could not find your school in our database. <a href='mailto:info@awesomebookawards.com'>Please contact Lucy Collins for assistance</a>.</p>"
+				."<p class='text-danger'>We could not find your school in our database. <a href='mailto:info@awesomebookawards.com'>Please contact us for assistance</a>.</p>"
 				."<a href='".$this->pageURI."'><button type='button' class='btn btn-info'>Try Again...</button></a>";
 		}
 
