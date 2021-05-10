@@ -1,6 +1,6 @@
-const { mix } = require('laravel-mix');
+let mix = require('laravel-mix');
 
-mix.setPublicPath('public');
+//mix.setPublicPath('public');
 
 mix.js('resources/js/app.js', './public/js/')
 	.sass('resources/sass/theme.scss', './public/css/')
