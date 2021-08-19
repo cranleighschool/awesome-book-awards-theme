@@ -21,9 +21,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8">
 				<div class="site-info">
 					<?php printf( //WPCS: XSS ok.
-						( 'The Awesome Book Awards are an initiative by %1$s. <br />For more information please contact %2$s.'), '<a href="'.esc_url( 'https://www.cranprep.org/' ).'">Cranleigh Preparatory School</a>', '<a href="mailto:info@awesomebookawards.com">Lucy Collins</a>'); ?></div>
+						( 'The Awesome Book Awards are an initiative by %1$s. <br />For more information please contact %2$s.'), '<a href="'.esc_url( 'https://www.cranprep.org/' ).'">Cranleigh Preparatory School</a>', '<a href="mailto:info@awesomebookawards.com">us</a>'); ?></div>
 			</div>
-			
+
 			<div class="col-md-4">
 				<?php $custom_logo_id = get_theme_mod('custom_logo');
 				$image = wp_get_attachment_image_src($custom_logo_id, 'full');
@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-						
+
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
